@@ -1,9 +1,17 @@
 :root {
-  --blue-color: #1E90FF;
+  --blue-colour: #1E90FF;
+  --pink-colour: #FF1E90;
+  --light-grey-colour: #efeff2;
+  --dark-grey-colour: #808080;
+
 }
 
 h1 {
   text-align: center;
+}
+
+a {
+  color: var(--light-grey-colour);
 }
 
 .portrait-circle{
@@ -17,13 +25,13 @@ h1 {
 
 .navbar--styling{
     max-height: 100px;
-    border-bottom: var(--blue-color);
+    border-bottom: var(--blue-colour);
     border-bottom-style: solid;
     border-bottom-width: 12px;
 }
 
 .grey-background{
-  background-color: #efeff2;
+  background-color: var(--dark-grey-colour);
 }
 
 
@@ -31,27 +39,27 @@ h1 {
   border-radius: 10px;
   padding: 15px;
 
-  border-left-color: var(--blue-color);
+  border-left-color: var(--blue-colour);
   border-left-style: solid;
   border-left-width: 2px;
 
-  border-right-color: var(--blue-color);
+  border-right-color: var(--blue-colour);
   border-right-style: solid;
   border-right-width: 2px;
 }
 
-.navbar-light {
-    background-color: #efeff2;
+.navbar-default {
+    background-color: var(--dark-grey-colour);
  }
 
  @media only screen and (max-width: 768px) {
-    .navbar-light .navbar-collapse {
+    .navbar-default .navbar-collapse {
         text-align: center;
-        background-color: #efeff2;
+        background-color: var(--dark-grey-colour);
         z-index: 10;
      }
  }
 
 .active {
-  color: var(--blue-color) !important;
+  font-style: italic;
 }
