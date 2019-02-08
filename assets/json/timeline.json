@@ -1,0 +1,18 @@
+[
+  {
+    "date":2018,
+    "text":"Joined Mumsnet as an Apprentice Data Engineer"
+  },
+  {
+    "date": 2015,
+    "text":"Did a CodeFirst:Girls intro to web development course"
+  },
+  {
+    "date":2014,
+    "text":"Got my first experience using Python during a Bioinformatics module at university"
+  },
+  {
+    "date":2013,
+    "text":"Started using some HTML/CSS and PHP to make a text-based choose your own adventure game"
+  }
+]
