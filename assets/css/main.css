@@ -1,0 +1,57 @@
+:root {
+  --blue-color: #1E90FF;
+}
+
+h1 {
+  text-align: center;
+}
+
+.portrait-circle{
+  background-image: url("../img/sarah.jpg");
+  background-size: cover;
+  background-position: 0% 10%;
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+}
+
+.navbar--styling{
+    max-height: 100px;
+    border-bottom: var(--blue-color);
+    border-bottom-style: solid;
+    border-bottom-width: 12px;
+}
+
+.grey-background{
+  background-color: #efeff2;
+}
+
+
+.container--border{
+  border-radius: 10px;
+  padding: 15px;
+
+  border-left-color: var(--blue-color);
+  border-left-style: solid;
+  border-left-width: 2px;
+
+  border-right-color: var(--blue-color);
+  border-right-style: solid;
+  border-right-width: 2px;
+}
+
+.navbar-light {
+    background-color: #efeff2;
+ }
+
+ @media only screen and (max-width: 768px) {
+    .navbar-light .navbar-collapse {
+        text-align: center;
+        background-color: #efeff2;
+        z-index: 10;
+     }
+ }
+
+.active {
+  color: var(--blue-color) !important;
+}
