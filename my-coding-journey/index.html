@@ -44,24 +44,6 @@
               <p>Joined Mumsnet as an Apprentice Data Engineer</p>
             </div>
           </div>
-          <div class="timeline-container right">
-            <div class="content">
-              <h2>2015</h2>
-              <p>Did a CodeFirst:Girls intro to web development course</p>
-            </div>
-          </div>
-          <div class="timeline-container left">
-            <div class="content">
-              <h2>2014</h2>
-              <p>Got my first experience using Python during a Bioinformatics module at university</p>
-            </div>
-          </div>
-          <div class="timeline-container right">
-            <div class="content">
-              <h2>2013</h2>
-              <p>Started using some HTML/CSS and PHP to make a text-based choose your own adventure game</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -72,11 +54,18 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="./assets/js/current-page.js"></script>
+  <script src="../assets/js/current-page.js"></script>
   <script>
     $('document').ready(function(){
-        let activeLinkText = $(".active").text()
-      	$(".active").html(`<i class=\"fas fa-caret-right\"></i> ${activeLinkText}`)
+      $.getJSON( "https://sarahfrench.github.io/assests/json/timeline.json", function( data ) {
+        console.log(data)
+
+        // let items = [];
+        // $.each( data, function( key, val ) {
+        //   items.push( "<li id='" + key + "'>" + val + "</li>" );
+        // });
+
+      });
     });
   </script>
 </body>
