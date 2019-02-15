@@ -1,7 +1,7 @@
 // Testing imorting partials
 @import 'variables';
 
-// Testing using mixins - backround colour
+// Testing using mixins - background colour
 @mixin gimme-a-background-colour($color){
   background-color: $color;
 }
