@@ -9,9 +9,8 @@ h1 {
 
 a {
   color: var(--light-grey-colour); }
-
-a:hover {
-  color: var(--light-grey-colour); }
+  a:hover {
+    color: var(--light-grey-colour); }
 
 .portrait-circle {
   background-image: url("../img/sarah.jpg");
@@ -56,18 +55,17 @@ a:hover {
 .timeline {
   position: relative;
   max-width: 1200px;
-  margin: 0 auto; }
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: black;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px; }
+  margin: 0 auto;
+  /* The actual timeline (the vertical ruler) */ }
+  .timeline:after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: black;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px; }
 
 /* Container around content */
 .timeline-container {
@@ -91,41 +89,38 @@ a:hover {
 
 /* Place the container to the left */
 .left {
-  left: 0; }
+  left: 0;
+  /* Add arrows to the left container (pointing right) */ }
+  .left:before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent var(--light-grey-colour); }
 
 /* Place the container to the right */
 .right {
-  left: 50%; }
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent var(--light-grey-colour); }
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent var(--light-grey-colour) transparent transparent; }
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px; }
+  left: 50%;
+  /* Add arrows to the right container (pointing left) */
+  /* Fix the circle for containers on the right side */ }
+  .right:before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent var(--light-grey-colour) transparent transparent; }
+  .right:after {
+    left: -16px; }
 
 /* The actual content */
 .content {
