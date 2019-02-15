@@ -81,11 +81,11 @@ a {
   border-radius: 50%;
   z-index: 1; }
 
-/* Place the container to the left */
 .left {
-  left: 0;
-  /* Add arrows to the left container (pointing right) */ }
+  /* Place the container to the left */
+  left: 0; }
   .left:before {
+    /* Add arrows to the left container (pointing right) */
     content: " ";
     height: 0;
     position: absolute;
@@ -97,12 +97,11 @@ a {
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent #efeff2; }
 
-/* Place the container to the right */
 .right {
-  left: 50%;
-  /* Add arrows to the right container (pointing left) */
-  /* Fix the circle for containers on the right side */ }
+  /* Place the container to the right */
+  left: 50%; }
   .right:before {
+    /* Add arrows to the right container (pointing left) */
     content: " ";
     height: 0;
     position: absolute;
@@ -114,10 +113,11 @@ a {
     border-width: 10px 10px 10px 0;
     border-color: transparent #efeff2 transparent transparent; }
   .right:after {
+    /* Fix the circle for containers on the right side */
     left: -16px; }
 
-/* The actual content */
 .content {
+  /* The actual content */
   padding: 20px 30px;
   background-color: #efeff2;
   position: relative;

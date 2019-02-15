@@ -106,12 +106,14 @@ a {
   z-index: 1;
 }
 
-/* Place the container to the left */
+
 .left {
+  /* Place the container to the left */
   left: 0;
 
-  /* Add arrows to the left container (pointing right) */
+
   &:before {
+    /* Add arrows to the left container (pointing right) */
     content: " ";
     height: 0;
     position: absolute;
@@ -125,12 +127,14 @@ a {
   }
 }
 
-/* Place the container to the right */
+
 .right {
+  /* Place the container to the right */
   left: 50%;
 
-  /* Add arrows to the right container (pointing left) */
+
   &:before {
+    /* Add arrows to the right container (pointing left) */
     content: " ";
     height: 0;
     position: absolute;
@@ -143,14 +147,16 @@ a {
     border-color: transparent $light-grey-colour transparent transparent;
   }
 
-  /* Fix the circle for containers on the right side */
+
   &:after {
+    /* Fix the circle for containers on the right side */
     left: -16px;
   }
 }
 
-/* The actual content */
+
 .content {
+  /* The actual content */
   padding: 20px 30px;
   background-color: $light-grey-colour;
   position: relative;
