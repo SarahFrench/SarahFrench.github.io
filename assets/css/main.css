@@ -1,16 +1,10 @@
-:root {
-  --blue-colour: #1E90FF;
-  --pink-colour: #FF1E90;
-  --light-grey-colour: #efeff2;
-  --dark-grey-colour: #808080; }
-
 h1 {
   text-align: center; }
 
 a {
-  color: var(--light-grey-colour); }
+  color: var(#efeff2); }
   a:hover {
-    color: var(--light-grey-colour); }
+    color: var(#efeff2); }
 
 .portrait-circle {
   background-image: url("../img/sarah.jpg");
@@ -22,30 +16,30 @@ a {
 
 .navbar--styling {
   max-height: 100px;
-  border-bottom: var(--blue-colour);
+  border-bottom: var(#1E90FF);
   border-bottom-style: solid;
   border-bottom-width: 12px; }
 
 .grey-background {
-  background-color: var(--dark-grey-colour); }
+  background-color: var(#808080); }
 
 .container--border {
   border-radius: 10px;
   padding: 15px;
-  border-left-color: var(--blue-colour);
+  border-left-color: var(#1E90FF);
   border-left-style: solid;
   border-left-width: 2px;
-  border-right-color: var(--blue-colour);
+  border-right-color: var(#1E90FF);
   border-right-style: solid;
   border-right-width: 2px; }
 
 .navbar-default {
-  background-color: var(--dark-grey-colour); }
+  background-color: var(#808080); }
 
 @media only screen and (max-width: 768px) {
   .navbar-default .navbar-collapse {
     text-align: center;
-    background-color: var(--dark-grey-colour);
+    background-color: var(#808080);
     z-index: 10; } }
 .active {
   font-style: italic; }
@@ -81,7 +75,7 @@ a {
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: var(--light-grey-colour);
+  background-color: var(#efeff2);
   border: 4px solid #FF9F55;
   top: 15px;
   border-radius: 50%;
@@ -101,7 +95,7 @@ a {
     right: 30px;
     border: medium solid white;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent var(--light-grey-colour); }
+    border-color: transparent transparent transparent var(#efeff2); }
 
 /* Place the container to the right */
 .right {
@@ -118,14 +112,14 @@ a {
     left: 30px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
-    border-color: transparent var(--light-grey-colour) transparent transparent; }
+    border-color: transparent var(#efeff2) transparent transparent; }
   .right:after {
     left: -16px; }
 
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: var(--light-grey-colour);
+  background-color: var(#efeff2);
   position: relative;
   border-radius: 6px; }
 
