@@ -2,9 +2,9 @@ h1 {
   text-align: center; }
 
 a {
-  color: var(#efeff2); }
+  color: #efeff2; }
   a:hover {
-    color: var(#efeff2); }
+    color: #efeff2; }
 
 .portrait-circle {
   background-image: url("../img/sarah.jpg");
@@ -16,30 +16,30 @@ a {
 
 .navbar--styling {
   max-height: 100px;
-  border-bottom: var(#1E90FF);
+  border-bottom: #1E90FF;
   border-bottom-style: solid;
   border-bottom-width: 12px; }
 
 .grey-background {
-  background-color: var(#808080); }
+  background-color: #808080; }
 
 .container--border {
   border-radius: 10px;
   padding: 15px;
-  border-left-color: var(#1E90FF);
+  border-left-color: #1E90FF;
   border-left-style: solid;
   border-left-width: 2px;
-  border-right-color: var(#1E90FF);
+  border-right-color: #1E90FF;
   border-right-style: solid;
   border-right-width: 2px; }
 
 .navbar-default {
-  background-color: var(#808080); }
+  background-color: #808080; }
 
 @media only screen and (max-width: 768px) {
   .navbar-default .navbar-collapse {
     text-align: center;
-    background-color: var(#808080);
+    background-color: #808080;
     z-index: 10; } }
 .active {
   font-style: italic; }
@@ -75,7 +75,7 @@ a {
   width: 25px;
   height: 25px;
   right: -17px;
-  background-color: var(#efeff2);
+  background-color: #efeff2;
   border: 4px solid #FF9F55;
   top: 15px;
   border-radius: 50%;
@@ -95,7 +95,7 @@ a {
     right: 30px;
     border: medium solid white;
     border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent var(#efeff2); }
+    border-color: transparent transparent transparent #efeff2; }
 
 /* Place the container to the right */
 .right {
@@ -112,14 +112,14 @@ a {
     left: 30px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
-    border-color: transparent var(#efeff2) transparent transparent; }
+    border-color: transparent #efeff2 transparent transparent; }
   .right:after {
     left: -16px; }
 
 /* The actual content */
 .content {
   padding: 20px 30px;
-  background-color: var(#efeff2);
+  background-color: #efeff2;
   position: relative;
   border-radius: 6px; }
 
