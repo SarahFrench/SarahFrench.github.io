@@ -8,6 +8,18 @@
   .project-description > h3 {
     font-weight: bold; }
 
+.giphy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.giphyGIF-container {
+  height: auto; }
+
+.giphyGIF-container .giphyGIF {
+  margin-bottom: 1em; }
+
 h1 {
   text-align: center; }
 
@@ -49,8 +61,7 @@ h1 {
 @media only screen and (max-width: 768px) {
   .navbar-default .navbar-collapse {
     text-align: center;
-    background-color: #808080;
-    z-index: 10; } }
+    background-color: #808080; } }
 .active {
   font-style: italic; }
 

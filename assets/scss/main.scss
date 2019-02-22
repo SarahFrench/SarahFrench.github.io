@@ -1,6 +1,8 @@
 // Testing imorting partials
 @import 'variables';
 @import 'personal-projects';
+@import 'giphy';
+
 
 // Testing using mixins - background colour
 @mixin gimme-a-background-colour($color){
@@ -61,10 +63,10 @@ h1 {
     .navbar-default .navbar-collapse {
         text-align: center;
         @include gimme-a-background-colour($dark-grey-colour);
-        z-index: 10;
+        // z-index: 10;
      }
  }
-
+ 
 .active {
   font-style: italic;
 }

@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAEA,QAAS;EACP,aAAa,EAAE,IAAI;;AAGrB,oBAAoB;EAClB,OAAO,EAAE,IAAI;EACb,gBAAgB,ECNE,OAAO;EDOzB,UAAU,EAAE,IAAI;EAChB,yBAAO;IACL,WAAW,EAAE,IAAI",
-"sources": ["../scss/personal-projects.scss","../scss/_variables.scss"],
-"names": [],
-"file": "personal-projects.css"
-}
