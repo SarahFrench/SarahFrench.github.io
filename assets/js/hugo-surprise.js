@@ -5,7 +5,7 @@ function updateKeyPressHistory(key){
 function checkForHugo(keyPressHistory){
   if (keyPressHistory.length >= 4){
     var lastFourKeystrokes = keyPressHistory.slice(keyPressHistory.length-8,keyPressHistory.length).toString()
-    if (lastFourKeystrokes === "72,72,85,85,71,71,79,79"){
+    if (lastFourKeystrokes === "72,85,71,79"){
       console.log("Hi Hugo!")
       $("h1").html('<h1>Hi Hugo!</h1>')
       $(".surprise").append(`<img src="./assets/img/hugo.gif">`)
