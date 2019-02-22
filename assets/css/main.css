@@ -79,12 +79,12 @@ h1 {
   width: 50%; }
 
 /* The circles on the timeline */
-.container::after {
+.timeline-container::after {
   content: '';
   position: absolute;
   width: 25px;
   height: 25px;
-  right: -17px;
+  right: -13px;
   background-color: #efeff2;
   border: 4px solid #FF9F55;
   top: 15px;
@@ -109,7 +109,7 @@ h1 {
 
 .right {
   /* Place the container to the right */
-  left: 50%; }
+  left: 50.25%; }
   .right:before {
     /* Add arrows to the right container (pointing left) */
     content: " ";
