@@ -2,11 +2,13 @@ function updateKeyPressHistory(key){
   keyPressHistory.push(key);
 }
 
-function refreshKeyPressHistory(refreshInProgress){
-  if (!refreshInProgress){
-    setTimeout(keyPressHistory=[], 2000)
-    // setTimeout(refreshInProgress= false, 2000)
-    refreshInProgress = true;
+function checkForKonami(keyPressHistory){
+  if (keyPressHistory.length >= 10){
+    var lastTenKeystrokes = keyPressHistory.slice(keyPressHistory.length-10,keyPressHistory.length).toString()
+    if (lastTenKeystrokes === konamiCode){
+      console.log("Konami!")
+      $('surprise').append('<img src="./assets/img/konami.jpg">')
+    }
   }
 }
 
@@ -20,15 +22,14 @@ var keycode = {
   b: 66,
   a: 65
 };
-var konamiCode= [keycode.up,keycode.up,keycode.down, keycode.down, keycode.left, keycode.right,keycode.left, keycode.right,keycode.b, keycode.a];
+var konamiCode = [keycode.up,keycode.up,keycode.down, keycode.down, keycode.left, keycode.right,keycode.left, keycode.right,keycode.b, keycode.a].toString();
 
 $(document).ready(function () {
 
     $('body').on('keydown', function( e ) {
-      var keyPressHistory =[];
+      // var keyPressHistory =[];
       updateKeyPressHistory(e.which)
-      // refreshKeyPressHistory(refreshInProgress)
-
+      checkForKonami(keyPressHistory)
     });
 
 });
