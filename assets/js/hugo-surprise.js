@@ -7,7 +7,8 @@ function checkForKonami(keyPressHistory){
     var lastTenKeystrokes = keyPressHistory.slice(keyPressHistory.length-10,keyPressHistory.length).toString()
     if (lastTenKeystrokes === konamiCode){
       console.log("Konami!")
-      $('surprise').append('<img src="./assets/img/konami.jpg">')
+      $("h1").html('<h1>KONAMI!</h1>')
+      $(".surprise").append(`<img src="./assets/img/konami.jpg" class="surprise_img">`)
     }
   }
 }
