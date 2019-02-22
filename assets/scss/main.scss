@@ -1,5 +1,6 @@
 // Testing imorting partials
 @import 'variables';
+@import 'personal-projects';
 
 // Testing using mixins - background colour
 @mixin gimme-a-background-colour($color){
@@ -66,20 +67,6 @@ h1 {
 
 .active {
   font-style: italic;
-}
-
-.project {
-  margin-bottom: 50px;
-}
-
-.project-description{
-  padding: 10px;
-  background-color: $light-grey-colour;
-  min-height: 75px;
-  & > h3 {
-    font-weight: bold;
-  }
-
 }
 
 /* Below is copied from a W3Schools How To & tweaked for my site */

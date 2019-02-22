@@ -1,0 +1,11 @@
+.project {
+  margin-bottom: 50px; }
+
+.project-description {
+  padding: 10px;
+  background-color: #efeff2;
+  min-height: 75px; }
+  .project-description > h3 {
+    font-weight: bold; }
+
+/*# sourceMappingURL=personal-projects.css.map */

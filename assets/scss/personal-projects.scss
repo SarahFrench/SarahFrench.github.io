@@ -1,0 +1,15 @@
+@import 'variables';
+
+.project {
+  margin-bottom: 50px;
+}
+
+.project-description{
+  padding: 10px;
+  background-color: $light-grey-colour;
+  min-height: 75px;
+  & > h3 {
+    font-weight: bold;
+  }
+
+}
