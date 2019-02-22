@@ -1,9 +1,9 @@
 h1 {
   text-align: center; }
 
-a {
+.navbar-nav > a {
   color: #efeff2; }
-  a:hover {
+  .navbar-nav > a:hover {
     color: #efeff2; }
 
 .portrait-circle {
@@ -43,6 +43,16 @@ a {
     z-index: 10; } }
 .active {
   font-style: italic; }
+
+.project {
+  margin-bottom: 50px; }
+
+.project-description {
+  padding: 10px;
+  background-color: #efeff2;
+  min-height: 75px; }
+  .project-description > h3 {
+    font-weight: bold; }
 
 /* Below is copied from a W3Schools How To & tweaked for my site */
 /* The actual timeline (the vertical ruler) */

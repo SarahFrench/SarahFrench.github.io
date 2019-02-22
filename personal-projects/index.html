@@ -37,17 +37,48 @@
   <div class="container container--border">
     <div class="row">
       <div class="col-md-12">
-        Page content goes here
+        <div class="project">
+          <div class="project-description">
+            <h3>BeerBot</h3>
+            <p>A Slack bot to organise who buys beers for Friday afternoons at the office</p>
+          </div>
+          <ul>
+            <li>Posts to a Friday Beers channel in Slack using the <a href="https://api.slack.com/">Slack API</a></li>
+            <li>Uses the <a href="https://developers.google.com/sheets/api/">Google Sheets API</a> to read/write info about whose turn it is to buy beer</li>
+            <li>Could use membership info for the beers channel to inform who should be included in the beer rota document in Google Sheets</li>
+            <li>Can remind the person due to buy beer on a given Friday, and post "Beer time!" at 4pm in the channel</li>
+          </ul>
+        </div>
+        <div class="project">
+          <div class="project-description">
+            <h3>Mumsnet Birthdays & Anniversary announcements</h3>
+          </div>
+          <ul>
+            <li>Uses the <a href="https://help.hibob.com/faq-s/bobs-api">Hibob API</a> to access HR information, including birthdays and work anniversaries</li>
+            <li>Uses the <a href="https://developers.google.com/slides/">Google Slides API</a> to read/write info to slides about whose birthday/work anniversary is today</li>
+            <li>The slides will update every working day, and be displayed on a TV screen at te front of the office</li>
+          </ul>
+        </div>
+        <div class="project">
+          <div class="project-description">
+            <h3>PageSpeedBot</h3>
+            <p>A Slack bot to monitor and post updates about the page load speed of Mumsnet websites</p>
+          </div>
+          <ul>
+            <li>Either accesses data collected via Google Analytics (?) or use Google's <a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed Insights API</a> to get info about pagespeed on the Mumsnet website</li>
+            <li>Posts to a Page Speed channel in Slack using the <a href="https://api.slack.com/">Slack API</a></li>
+            <li>The bot could eventually be made to respond to input (e.g. query about a subsection of the website) and give info on an as-needed basis</li>
+          </ul>
+        </div>
       </div>
     </div>
-  </div>
 
 
-  <!-- JS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-  <script src="../assets/js/current-page.js"></script>
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="../assets/js/current-page.js"></script>
 
 </body>
 

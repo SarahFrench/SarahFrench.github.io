@@ -10,7 +10,7 @@ h1 {
   text-align: center;
 }
 
-a {
+.navbar-nav > a {
   color: $light-grey-colour;
 
   &:hover {
@@ -68,6 +68,19 @@ a {
   font-style: italic;
 }
 
+.project {
+  margin-bottom: 50px;
+}
+
+.project-description{
+  padding: 10px;
+  background-color: $light-grey-colour;
+  min-height: 75px;
+  & > h3 {
+    font-weight: bold;
+  }
+
+}
 
 /* Below is copied from a W3Schools How To & tweaked for my site */
 
@@ -138,7 +151,6 @@ a {
   /* Place the container to the right */
   left: 50%;
 
-
   &:before {
     /* Add arrows to the right container (pointing left) */
     content: " ";
@@ -153,13 +165,11 @@ a {
     border-color: transparent $light-grey-colour transparent transparent;
   }
 
-
   &:after {
     /* Fix the circle for containers on the right side */
     left: -16px;
   }
 }
-
 
 .content {
   /* The actual content */
