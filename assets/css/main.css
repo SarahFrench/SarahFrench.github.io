@@ -8,6 +8,10 @@
   .project-description > h3 {
     font-weight: bold; }
 
+.project-github-logo {
+  font-size: 1em;
+  margin-left: 1em; }
+
 .giphy {
   display: flex;
   justify-content: center;
