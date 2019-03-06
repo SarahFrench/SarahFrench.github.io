@@ -20,6 +20,15 @@
 .giphyGIF-container .giphyGIF {
   margin-bottom: 1em; }
 
+.contact-icon {
+  margin: auto;
+  font-size: 3em; }
+
+.contact-icons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
 .surprise {
   display: flex;
   justify-content: center;
