@@ -24,7 +24,7 @@
   margin: auto;
   font-size: 3em; }
 
-a > i {
+a.contact-icon--link > i {
   color: black; }
 
 .contact-icons-container {
