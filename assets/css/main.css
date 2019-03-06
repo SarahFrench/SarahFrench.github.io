@@ -24,6 +24,9 @@
   margin: auto;
   font-size: 3em; }
 
+a > i {
+  color: black; }
+
 .contact-icons-container {
   display: flex;
   flex-direction: row;

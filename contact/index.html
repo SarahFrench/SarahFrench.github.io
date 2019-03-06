@@ -41,7 +41,7 @@
         <div class="contact-icons-container">
           <i class="fab fa-facebook-square contact-icon" id="facebook"></i>
           <i class="fab fa-instagram contact-icon" id="instagram"></i>
-          <i class="fab fa-github-square contact-icon" id="github"></i>
+          <a href="https://github.com/SarahFrench" class="contact-icon--link contact-icon"><i class="fab fa-github-square" id="github"></i></a>
           <i class="fab fa-linkedin contact-icon" id="linkedin"></i>
           <i class="fas fa-at contact-icon" id="email"></i>
         </div>
@@ -55,18 +55,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   <script src="../assets/js/current-page.js"></script>
-  <script>
-    //adapted from https://javascript.info/js-animation
-    $("#facebook").click( function() {
-      let start = Date.now();
-      let timer = setInterval(function() {
-        let timePassed = Date.now() - start;
-        facebook.style.opacity = 1 - (timePassed/1000);
-        if (timePassed > 1000) clearInterval(timer);
-      }, 20);
-    })
+  <script src="../assets/js/you-can-only-see-my-github.js"></script>
 
-  </script>
 
 </body>
 
