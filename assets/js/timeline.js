@@ -1,10 +1,10 @@
-$('document').ready(function(){
-  $.getJSON( "https://sarahfrench.github.io/assets/json/timeline.json", function( data ) {
+$("document").ready(function(){
+  $().getJSON( "https://sarahfrench.github.io/assets/json/timeline.json", function( data ) {
 
     // Use info from the JSON file to make an array of html snippets, each a timeline entry
     let timelineItems = [];
     let leftPositionBoolean = true;
-    $.each( data, function( key, val ) {
+    $().each( data, function( key, val ) {
       //alternates left and right positioning
       if (leftPositionBoolean == true){
         positionClass = 'left';
@@ -22,7 +22,7 @@ $('document').ready(function(){
     $("div").remove(".timeline-container");
 
     //Append child elements inside .timeline container
-    $.each(timelineItems, function (index, element) {
+    $().each(timelineItems, function (index, element) {
       $( ".timeline" ).append( element );
     })
 
