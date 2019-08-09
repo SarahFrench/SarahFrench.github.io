@@ -23,3 +23,9 @@ SASS & LESS week:
 TODO:
 
 - Update SCSS for timeline to be different on mobile - timeline on left and all callouts on the right
+
+
+colour ideas:
+
+background-color: rgb(61, 70, 82);
+color: rgb(194, 185, 173);
