@@ -1,8 +1,6 @@
-// Testing imorting partials
+// Testing importing partials
 @import 'variables';
-@import 'personal-projects';
-@import 'giphy';
-@import 'contact';
+
 
 
 // Testing using mixins - background colour
@@ -10,168 +8,15 @@
   background-color: $color;
 }
 
-.surprise {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+h2 {
+  color: $brand-1;
+  margin: 1em;
 }
 
-h1 {
-  text-align: center;
+mark {
+   background-color: $brand-2; 
 }
 
-.navbar-nav > a {
-  color: $light-grey-colour;
-
-  &:hover {
-    color: $light-grey-colour;
-  }
-}
-
-.portrait-circle{
-  background-image: url("../img/sarah.jpg");
-  background-size: cover;
-  background-position: 0% 10%;
-  height: 150px;
-  width: 150px;
-  border-radius: 100%;
-}
-
-.navbar--styling{
-    max-height: 100px;
-    border-bottom: $blue-colour;
-    border-bottom-style: solid;
-    border-bottom-width: 12px;
-}
-
-.grey-background{
-  @include gimme-a-background-colour($dark-grey-colour);
-}
-
-
-.container--border{
-  border-radius: 10px;
-  padding: 15px;
-
-  border-left-color: $blue-colour;
-  border-left-style: solid;
-  border-left-width: 2px;
-
-  border-right-color: $blue-colour;
-  border-right-style: solid;
-  border-right-width: 2px;
-}
-
-.navbar-default {
-    @include gimme-a-background-colour($dark-grey-colour);
- }
-
- @media only screen and (max-width: 768px) {
-    .navbar-default .navbar-collapse {
-        text-align: center;
-        @include gimme-a-background-colour($dark-grey-colour);
-        // z-index: 10;
-     }
- }
-
-.active {
-  font-style: italic;
-}
-
-/* Below is copied from a W3Schools How To & tweaked for my site */
-
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-
-  /* The actual timeline (the vertical ruler) */
-  &:after {
-    content: '';
-    position: absolute;
-    width: 6px;
-    @include gimme-a-background-colour(black);
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    margin-left: -3px;
-  }
-}
-
-/* Container around content */
-.timeline-container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
-
-/* The circles on the timeline */
-.timeline-container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -13px;
-  @include gimme-a-background-colour($light-grey-colour);
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}
-
-
-.left {
-  /* Place the container to the left */
-  left: 0;
-
-
-  &:before {
-    /* Add arrows to the left container (pointing right) */
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px; //changes position of arrow along y axis of bubble
-    width: 0;
-    z-index: 1;
-    right: 30px;
-    border: medium solid white;
-    border-width: 10px 0 10px 10px;
-    border-color: transparent transparent transparent $light-grey-colour;
-  }
-}
-
-
-.right {
-  /* Place the container to the right */
-  left: 50.25%;
-
-  &:before {
-    /* Add arrows to the right container (pointing left) */
-    content: " ";
-    height: 0;
-    position: absolute;
-    top: 22px;
-    width: 0;
-    z-index: 1;
-    left: 30px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent $light-grey-colour transparent transparent;
-  }
-
-  &:after {
-    /* Fix the circle for containers on the right side */
-    left: -16px;
-  }
-}
-
-.content {
-  /* The actual content */
-  padding: 20px 30px;
-  @include gimme-a-background-colour($light-grey-colour);
-  position: relative;
-  border-radius: 6px;
+li {
+  margin-bottom: 1em;
 }
