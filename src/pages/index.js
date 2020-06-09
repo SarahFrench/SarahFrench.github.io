@@ -7,7 +7,7 @@ export default function Home() {
         <div style={{ color: `purple` }}>
             <Header headerText="Hello World" />
             <Link to="/about/">About</Link>
-            <p>Hello worlding in GatsbyJS.</p>
+            <p>If this text has changed then pushes to my develop branch trigger Travis to build the project and push to master.</p>
             <img src="https://source.unsplash.com/random/400x200" alt="" />
         </div>
     )
