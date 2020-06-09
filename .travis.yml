@@ -1,0 +1,16 @@
+language: node_js
+before_script:
+  - npm install -g gatsby-cli
+node_js:
+  - "stable"
+cache:
+    directories:
+    - node_modules
+script:
+  - echo "hello world"
+deploy:
+  provider: script
+  script: npm install && npm run deploy
+  skip_cleanup: true
+  on:
+    branch: develop
