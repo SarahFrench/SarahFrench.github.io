@@ -23,12 +23,7 @@ import "./Lights.css";
         window.addEventListener('resize', this.handleSvgDimensions)
      }
 
-     componentDidUpdate = () => {
-        console.log("update")
-     }
-
      handleSvgDimensions = () => {
-         console.log("resizing, width is now:", this.state.svgRef.current.clientWidth)
         this.setState({
             height: window.innerHeight,
             width: window.innerWidth
