@@ -1,0 +1,11 @@
+.PageContainer {
+    margin: 0 1em 0 1em;
+    
+}
+
+@media screen and (min-width: 500px){
+    .PageContainer {
+        margin: 0 3em 0 6em;
+    
+    }
+}
