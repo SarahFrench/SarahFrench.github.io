@@ -4,3 +4,34 @@
     left: 0;
     z-index: -999;
 }
+
+.light__bulbs ellipse {
+    rx: 2.4992;
+    ry: 2.4765;
+}
+
+.light__bulbs--red ellipse {
+    fill: #f93a5b;
+}
+
+.light__bulbs--yellow ellipse {
+    fill: #fbcf4c;
+}
+
+.light__bulbs--green ellipse {
+    fill: #68cba3;
+}
+
+.light__wires {
+    stroke:#20262f;
+    fill:none;
+}
+
+.light__sockets {
+    fill:#20262f;
+    stroke:#20262f;
+}
+
+.light__bar {
+    fill:#3e606d;
+}
