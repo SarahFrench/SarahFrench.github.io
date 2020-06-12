@@ -5,8 +5,6 @@ import Header from "../components/Header"
 import Menu from "../components/Menu"
 import Lights from "../components/Lights"
 
-import { Link } from "gatsby"
-
 
 export default function About() {
     return (
@@ -14,13 +12,7 @@ export default function About() {
         <Lights />
         <PageContainer>
           <Header headerText="About" />
-          <Menu
-            links={[
-              { href: "/", text: "Home" },
-              { href: "/about", text: "About" },
-            ]}
-          />
-          <Link to="/">Home</Link>
+          <Menu currentPage= "About" />
           <p>All about me.</p>
         </PageContainer>
       </div>
