@@ -14,12 +14,21 @@ class Lights extends React.Component {
         width: 530, //values come from Inkscape
         height: 280,
       },
+      flashStep: 1
     }
   }
 
   componentDidMount = () => {
     this.handleSvgDimensions()
-    window.addEventListener("resize", this.handleSvgDimensions)
+    window.addEventListener("resize", this.handleSvgDimensions);
+    setInterval(()=>{
+      // console.log((this.state.flashStep+1) % 3);
+     this.setState({flashStep: (this.state.flashStep+1) % 3}) 
+    }, 1000)
+  }
+
+  getBulbFlashClassName(){
+    return `lights__bulbs--flash${this.state.flashStep + 1}`
   }
 
   handleSvgDimensions = () => {
@@ -165,7 +174,7 @@ class Lights extends React.Component {
         </g>
         <g
           id="lightbulbs-1"
-          className="lights__bulbs"
+          className={`lights__bulbs ${this.getBulbFlashClassName()}`}
           transform={this.translate()}
         >
           <g className="lights__bulbs--red">
@@ -202,22 +211,11 @@ class Lights extends React.Component {
             <path d="m0 192.48a2.4992 2.4765 0 0 1 2.4564 1.1074 2.4992 2.4765 0 0 1 0.00868 2.6741 2.4992 2.4765 0 0 1-2.4492 1.123" />
             <ellipse cx="381.93" cy="28.28" />
             <ellipse cx="153.39" cy="28.163" />
-            <ellipse
-              cx="487.5"
-              cy="27.763"
-            />
-            <ellipse
-              cx="498.24"
-              cy="7.7087"
-            />
-            <ellipse
-              cx="514.68"
-              cy="21.07"
-            />
+            <ellipse cx="487.5" cy="27.763" />
+            <ellipse cx="498.24" cy="7.7087" />
+            <ellipse cx="514.68" cy="21.07" />
           </g>
-          <g
-            className="lights__bulbs--green"
-          >
+          <g className="lights__bulbs--green">
             {/* Green bulbs */}
             <ellipse cx="22.539" cy="34.983" />
             <ellipse cx="60.139" cy="12.418" />
@@ -243,22 +241,11 @@ class Lights extends React.Component {
             <ellipse cx="9.7007" cy="72.858" />
             <ellipse cx="4.2607" cy="106.84" />
             <ellipse cx="10.745" cy="164" />
-            <ellipse
-              cx="527.02"
-              cy="27.494"
-            />
-            <ellipse
-              cx="514.94"
-              cy="10.278"
-            />
-            <ellipse
-              cx="465.35"
-              cy="6.1669"
-            />
+            <ellipse cx="527.02" cy="27.494" />
+            <ellipse cx="514.94" cy="10.278" />
+            <ellipse cx="465.35" cy="6.1669" />
           </g>
-          <g
-            className="lights__bulbs--yellow"
-          >
+          <g className="lights__bulbs--yellow">
             {/* Yellow bulbs */}
             <ellipse cx="39.75" cy="34.458" />
             <ellipse cx="47.694" cy="23.832" />

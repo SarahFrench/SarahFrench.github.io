@@ -8,6 +8,7 @@
 .lights__bulbs ellipse {
     rx: 2.4992;
     ry: 2.4765;
+    transition: rx 3s, ry 3s, opacity 3s;
 }
 
 .lights__bulbs--red ellipse {
@@ -46,4 +47,22 @@
 
 .lights__bar {
     fill:#3e606d;
+}
+
+.lights__bulbs--flash1 ellipse:nth-child(3n+1){
+    rx:4;
+    ry:4;
+    opacity: 0.8;
+}
+
+.lights__bulbs--flash2 ellipse:nth-child(3n+2){
+    rx:4;
+    ry:4;
+    opacity: 0.8;
+}
+
+.lights__bulbs--flash3 ellipse:nth-child(3n+3){
+    rx:4;
+    ry:4;
+    opacity: 0.8;
 }
