@@ -1,0 +1,11 @@
+.Menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.Menu a {
+    margin: 0 1em 0 1em;
+    text-decoration: none;
+    color: #3E606D;
+}
