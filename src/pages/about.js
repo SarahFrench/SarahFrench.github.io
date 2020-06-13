@@ -8,7 +8,7 @@ import Lights from "../components/Lights"
 
 export default function About() {
     return (
-      <div style={{ color: `purple` }}>
+      <div>
         <Lights />
         <PageContainer>
           <Header headerText="About" />

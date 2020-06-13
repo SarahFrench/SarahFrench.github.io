@@ -7,13 +7,12 @@ import Lights from "../components/Lights"
 
 export default function Home() {
  return (
-   <div style={{ color: `purple` }}>
+   <div>
      <Lights />
      <PageContainer>
-       <Header headerText="sarah french" />
+       <Header headerText="Sarah French" />
        <Menu currentPage="Home" />
        <p>This is my website I'm making using GatsbyJS</p>
-       <img src="https://source.unsplash.com/random/400x200" alt="" />
      </PageContainer>
    </div>
  )
