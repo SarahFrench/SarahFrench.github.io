@@ -13,22 +13,13 @@ class Lights extends React.Component {
         y: 0,
         width: 530, //values come from Inkscape
         height: 280,
-      },
-      flashStep: 1
+      }
     }
   }
 
   componentDidMount = () => {
     this.handleSvgDimensions()
     window.addEventListener("resize", this.handleSvgDimensions);
-    setInterval(()=>{
-      // console.log((this.state.flashStep+1) % 3);
-     this.setState({flashStep: (this.state.flashStep+1) % 3}) 
-    }, 1000)
-  }
-
-  getBulbFlashClassName(){
-    return `lights__bulbs--flash${this.state.flashStep + 1}`
   }
 
   handleSvgDimensions = () => {
@@ -174,7 +165,7 @@ class Lights extends React.Component {
         </g>
         <g
           id="lightbulbs-1"
-          className={`lights__bulbs ${this.getBulbFlashClassName()}`}
+          className="lights__bulbs lights__bulbs--flash"
           transform={this.translate()}
         >
           <g className="lights__bulbs--red">
@@ -206,9 +197,9 @@ class Lights extends React.Component {
             <ellipse cx="432.15" cy="7.9371" />
             <ellipse cx="450.3" cy="30.992" />
             <ellipse cx="9.0388" cy="143.37" />
-            <path d="m0 172.41a2.4992 2.4765 0 0 1 1.1377 2.0763 2.4992 2.4765 0 0 1-1.1369 2.0768" />
-            <path d="m0 117.1a2.4992 2.4765 0 0 1 2.9897 0.73658 2.4992 2.4765 0 0 1-0.00325 3.0527 2.4992 2.4765 0 0 1-2.9913 0.73033" />
-            <path d="m0 192.48a2.4992 2.4765 0 0 1 2.4564 1.1074 2.4992 2.4765 0 0 1 0.00868 2.6741 2.4992 2.4765 0 0 1-2.4492 1.123" />
+            <ellipse cx="0" cy="120" />
+            <ellipse cx="0" cy="215" />
+            <ellipse cx="-2" cy="34" />
             <ellipse cx="381.93" cy="28.28" />
             <ellipse cx="153.39" cy="28.163" />
             <ellipse cx="487.5" cy="27.763" />
@@ -244,9 +235,12 @@ class Lights extends React.Component {
             <ellipse cx="527.02" cy="27.494" />
             <ellipse cx="514.94" cy="10.278" />
             <ellipse cx="465.35" cy="6.1669" />
+            <ellipse cx="0" cy="195" />
           </g>
           <g className="lights__bulbs--yellow">
             {/* Yellow bulbs */}
+            <ellipse cx="-1" cy="52" />
+            <ellipse cx="0" cy="175" />
             <ellipse cx="39.75" cy="34.458" />
             <ellipse cx="47.694" cy="23.832" />
             <ellipse cx="77.765" cy="20.119" />
@@ -268,11 +262,116 @@ class Lights extends React.Component {
             <ellipse cx="353.02" cy="34.026" />
             <ellipse cx="403.88" cy="15.2" />
             <ellipse cx="423.99" cy="19.814" />
-            <path d="m0.16239 30.382a2.4992 2.4765 0 0 1-2e-8 2.984" />
             <ellipse cx="5.709" cy="20.119" />
             <ellipse cx="9.7214" cy="89.258" />
             <ellipse cx="8.0149" cy="131.87" />
-            <path d="m0 212.58a2.4992 2.4765 0 0 1 3.2266 0.47698 2.4992 2.4765 0 0 1 0.00168 3.2327 2.4992 2.4765 0 0 1-3.2261 0.48027" />
+            <ellipse cx="469.2" cy="23.897" />
+            <ellipse cx="496.18" cy="20.813" />
+            <ellipse cx="527.53" cy="7.1948" />
+          </g>
+        </g>
+        <g
+          id="lightbulbs-2"
+          className="lights__bulbs lights__bulbs--white"
+          transform={this.translate()}
+        >
+          <g>
+            {/* Red bulbs */}
+            <ellipse cx="16.427" cy="12.245" />
+            <ellipse cx="9.5193" cy="28.254" />
+            <ellipse cx="45.217" cy="6.1344" />
+            <ellipse cx="55.501" cy="27.809" />
+            <ellipse cx="94.021" cy="22.721" />
+            <ellipse cx="93.756" cy="7.7199" />
+            <ellipse cx="178.57" cy="28.603" />
+            <ellipse cx="141.08" cy="7.6941" />
+            <ellipse cx="125.22" cy="18.515" />
+            <ellipse cx="111.31" cy="30.374" />
+            <ellipse cx="190.14" cy="3.6919" />
+            <ellipse cx="203.46" cy="6.6565" />
+            <ellipse cx="245.12" cy="13.525" />
+            <ellipse cx="238.21" cy="29.534" />
+            <ellipse cx="273.91" cy="7.4151" />
+            <ellipse cx="284.56" cy="28.548" />
+            <ellipse cx="322.71" cy="24.002" />
+            <ellipse cx="322.45" cy="9.0005" />
+            <ellipse cx="221.6" cy="29.711" />
+            <ellipse cx="407.26" cy="29.884" />
+            <ellipse cx="369.77" cy="8.9748" />
+            <ellipse cx="353.91" cy="19.796" />
+            <ellipse cx="340" cy="30.082" />
+            <ellipse cx="418.83" cy="4.9725" />
+            <ellipse cx="432.15" cy="7.9371" />
+            <ellipse cx="450.3" cy="30.992" />
+            <ellipse cx="9.0388" cy="143.37" />
+            <ellipse cx="0" cy="120" />
+            <ellipse cx="0" cy="215" />
+            <ellipse cx="-2" cy="34" />
+            <ellipse cx="381.93" cy="28.28" />
+            <ellipse cx="153.39" cy="28.163" />
+            <ellipse cx="487.5" cy="27.763" />
+            <ellipse cx="498.24" cy="7.7087" />
+            <ellipse cx="514.68" cy="21.07" />
+          </g>
+          <g>
+            {/* Green bulbs */}
+            <ellipse cx="22.539" cy="34.983" />
+            <ellipse cx="60.139" cy="12.418" />
+            <ellipse cx="107.01" cy="16.879" />
+            <ellipse cx="67.177" cy="24.432" />
+            <ellipse cx="155.32" cy="3.4955" />
+            <ellipse cx="188.74" cy="15.839" />
+            <ellipse cx="166.2" cy="32.869" />
+            <ellipse cx="139.71" cy="27.401" />
+            <ellipse cx="251.23" cy="36.264" />
+            <ellipse cx="288.83" cy="13.699" />
+            <ellipse cx="335.7" cy="18.159" />
+            <ellipse cx="295.87" cy="25.713" />
+            <ellipse cx="384.01" cy="4.7761" />
+            <ellipse cx="417.43" cy="17.119" />
+            <ellipse cx="394.89" cy="34.15" />
+            <ellipse cx="368.4" cy="28.681" />
+            <ellipse cx="4.0208" cy="6.855" />
+            <ellipse cx="202.78" cy="31.553" />
+            <ellipse cx="223.23" cy="21.192" />
+            <ellipse cx="431.47" cy="32.834" />
+            <ellipse cx="456.66" cy="16.33" />
+            <ellipse cx="9.7007" cy="72.858" />
+            <ellipse cx="4.2607" cy="106.84" />
+            <ellipse cx="10.745" cy="164" />
+            <ellipse cx="527.02" cy="27.494" />
+            <ellipse cx="514.94" cy="10.278" />
+            <ellipse cx="465.35" cy="6.1669" />
+            <ellipse cx="0" cy="195" />
+          </g>
+          <g>
+            {/* Yellow bulbs */}
+            <ellipse cx="-1" cy="52" />
+            <ellipse cx="0" cy="175" />
+            <ellipse cx="39.75" cy="34.458" />
+            <ellipse cx="47.694" cy="23.832" />
+            <ellipse cx="77.765" cy="20.119" />
+            <ellipse cx="106.41" cy="2.4765" />
+            <ellipse cx="116.26" cy="21.711" />
+            <ellipse cx="160.53" cy="12.586" />
+            <ellipse cx="148.41" cy="21.183" />
+            <ellipse cx="124.32" cy="32.745" />
+            <ellipse cx="175.19" cy="13.92" />
+            <ellipse cx="194.93" cy="19.256" />
+            <ellipse cx="230.43" cy="7.607" />
+            <ellipse cx="268.44" cy="35.739" />
+            <ellipse cx="276.38" cy="25.112" />
+            <ellipse cx="306.46" cy="21.4" />
+            <ellipse cx="335.1" cy="3.7572" />
+            <ellipse cx="344.95" cy="22.991" />
+            <ellipse cx="389.22" cy="13.866" />
+            <ellipse cx="377.1" cy="22.464" />
+            <ellipse cx="353.02" cy="34.026" />
+            <ellipse cx="403.88" cy="15.2" />
+            <ellipse cx="423.99" cy="19.814" />
+            <ellipse cx="5.709" cy="20.119" />
+            <ellipse cx="9.7214" cy="89.258" />
+            <ellipse cx="8.0149" cy="131.87" />
             <ellipse cx="469.2" cy="23.897" />
             <ellipse cx="496.18" cy="20.813" />
             <ellipse cx="527.53" cy="7.1948" />
