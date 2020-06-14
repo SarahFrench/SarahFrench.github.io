@@ -20,3 +20,7 @@ body {
     background-color:#008B8B;
     margin: 0;
 }
+
+p {
+    font-family: RobotoLight, sans-serif;
+}

@@ -2,10 +2,17 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    font-family: Muli, sans-serif;
+    font-size: larger;
 }
 
 .Menu a {
-    margin: 0 1em 0 1em;
+    margin: 0 1em 1em 1em;
     text-decoration: none;
     color: #3E606D;
+}
+
+.Menu a.current {
+    text-decoration: underline;
 }
