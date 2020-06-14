@@ -4,8 +4,3 @@ h1 {
     font-family: Muli, Roboto, sans-serif;
     font-size: xxx-large;
 }
-
-@font-face {
-  font-family: "Muli";
-  src: url("../fonts/Muli-VariableFont_wght.ttf");
-}

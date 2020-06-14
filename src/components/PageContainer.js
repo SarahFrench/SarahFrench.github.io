@@ -1,4 +1,5 @@
 import React from 'react';
+import './Fonts.css';
 import './PageContainer.css';
 
 function PageContainer (props){
