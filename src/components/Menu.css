@@ -19,3 +19,7 @@
 .Menu .current {
     text-decoration: underline;
 }
+
+.Menu .current h1 {
+    margin: 0;
+}
