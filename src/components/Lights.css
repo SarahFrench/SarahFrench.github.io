@@ -54,6 +54,35 @@
     fill:#3e606d;
 }
 
+.controller {
+    fill:#3e606d;
+    stroke: none;
+}
+
+.light.controller__sun {
+    fill: #FCAE49;
+}
+
+.light.controller__moon {
+    fill: #68cba3;
+}
+
+.dark.controller__sun, .dark.controller__moon {
+    fill: #ffffff;
+    opacity: 0.2;
+}
+
+.dark .controller__background {
+    fill:#3e606d;
+
+}
+
+.light .controller__background {
+    fill:#ffffff;
+    opacity: 0.2;
+
+}
+
 .lights__bulbs--flash ellipse:nth-child(3n){
     -webkit-animation: flash1 3s infinite; /* Safari 4+ */
     -moz-animation:    flash1 3s infinite; /* Fx 5+ */
