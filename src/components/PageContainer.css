@@ -1,9 +1,22 @@
 .PageContainer {
-    margin: 150px 0.5em 0 0.5em; 
+    margin: 150px 0.5em 0 0.5em;
+    background-color: #FFFFFE;
+    border-radius: 10px 10px 0 0;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 @media screen and (min-width: 500px){
     .PageContainer {
-            margin: 150px 4em 1em 4em;    
+            margin: 150px 4em 1em 4em;
+            max-width: 90vw;    
     }
+}
+
+body {
+    background-color:#008B8B;
+    margin: 0;
 }
