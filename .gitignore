@@ -1,3 +1,5 @@
+*.svg
+
 node_modules
 
 # Logs
