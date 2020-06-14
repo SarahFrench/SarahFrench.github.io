@@ -9,6 +9,7 @@ export default function Menu(props) {
         let links = [
             { href: "/", text: "Home" },
             { href: "/about", text: "About" },
+            { href: "/projects", text: "Projects" },
         ];
 
         for(let link of links){
