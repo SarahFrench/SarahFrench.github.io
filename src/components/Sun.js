@@ -2,18 +2,6 @@ import React from "react"
 
 function Sun() {
 
-   const translate = () => {
-    //translate needed to make it look normal
-    let offsetX = 0.5
-    let offsetY = 18.5
-
-    if (window.innerWidth < 500) {
-      offsetX = -100
-    }
-
-    return `translate(${offsetX},${offsetY})`
-  }
-
     return (
       <g id="Sun" className="controller__sun light">
         <ellipse

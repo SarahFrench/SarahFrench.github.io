@@ -2,17 +2,6 @@ import React from "react"
 
 function Moon() {
 
-   const translate = () => {
-    let offsetX = -14;
-    let offsetY = 119;
-
-    if (window.innerWidth < 500) {
-      offsetX = -100
-    }
-
-    return `translate(${offsetX},${offsetY})`
-  }
-
     return (
       <g
         id="Moon"
