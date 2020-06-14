@@ -7,8 +7,7 @@ export default function Menu(props) {
     const links = function(props){
 
         let links = [
-            { href: "/", text: "Home" },
-            { href: "/about", text: "About" },
+            { href: "/", text: "About" },
             { href: "/projects", text: "Projects" },
         ];
 
