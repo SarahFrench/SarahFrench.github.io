@@ -1,7 +1,7 @@
 import React from "react"
 
 import PageContainer from "../components/PageContainer"
-import Header from "../components/Header"
+import Title from "../components/Title"
 import Menu from "../components/Menu"
 import Lights from "../components/Lights"
 
@@ -11,10 +11,10 @@ export default function Home() {
         <div>
             <Lights />
             <PageContainer>
-                <Header headerText="Sarah French" />
-                <Menu currentPage="Home" />
+                <Title/>
+                <Menu currentPage="About" />
                 <p>This is my website I'm making using GatsbyJS</p>
-                </PageContainer>
+            </PageContainer>
         </div>
     )
 }
