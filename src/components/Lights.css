@@ -1,5 +1,5 @@
 .lights {
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: -999;
@@ -27,11 +27,11 @@
 }
 
 .lights__bulbs--green ellipse {
-    fill: #3e606D;
+    fill: #68cba3;
 }
 
 .lights__bulbs--green path {
-    fill: #3e606D;
+    fill: #68cba3;
 }
 
 .lights__bulbs--white ellipse {
@@ -55,45 +55,45 @@
 }
 
 .lights__bulbs--flash ellipse:nth-child(3n){
-    -webkit-animation: flash1 5s infinite; /* Safari 4+ */
-    -moz-animation:    flash1 5s infinite; /* Fx 5+ */
-    -o-animation:      flash1 5s infinite; /* Opera 12+ */
-    animation:         flash1 5s infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: flash1 3s infinite; /* Safari 4+ */
+    -moz-animation:    flash1 3s infinite; /* Fx 5+ */
+    -o-animation:      flash1 3s infinite; /* Opera 12+ */
+    animation:         flash1 3s infinite; /* IE 10+, Fx 29+ */
 }
 
 .lights__bulbs--flash ellipse:nth-child(3n+1){
-    -webkit-animation: flash2 5s infinite; /* Safari 4+ */
-    -moz-animation:    flash2 5s infinite; /* Fx 5+ */
-    -o-animation:      flash2 5s infinite; /* Opera 12+ */
-    animation:         flash2 5s infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: flash2 3s infinite; /* Safari 4+ */
+    -moz-animation:    flash2 3s infinite; /* Fx 5+ */
+    -o-animation:      flash2 3s infinite; /* Opera 12+ */
+    animation:         flash2 3s infinite; /* IE 10+, Fx 29+ */
 }
 
 .lights__bulbs--flash ellipse:nth-child(3n+2){
-    -webkit-animation: flash3 5s infinite; /* Safari 4+ */
-    -moz-animation:    flash3 5s infinite; /* Fx 5+ */
-    -o-animation:      flash3 5s infinite; /* Opera 12+ */
-    animation:         flash3 5s infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: flash3 3s infinite; /* Safari 4+ */
+    -moz-animation:    flash3 3s infinite; /* Fx 5+ */
+    -o-animation:      flash3 3s infinite; /* Opera 12+ */
+    animation:         flash3 3s infinite; /* IE 10+, Fx 29+ */
 }
 
 .lights__bulbs--white ellipse:nth-child(3n){
-    -webkit-animation: flash1-white 5s infinite; /* Safari 4+ */
-    -moz-animation:    flash1-white 5s infinite; /* Fx 5+ */
-    -o-animation:      flash1-white 5s infinite; /* Opera 12+ */
-    animation:         flash1-white 5s infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: whiteflash1 3s infinite; /* Safari 4+ */
+    -moz-animation:    whiteflash1 3s infinite; /* Fx 5+ */
+    -o-animation:      whiteflash1 3s infinite; /* Opera 12+ */
+    animation:         whiteflash1 3s infinite; /* IE 10+, Fx 29+ */
 }
 
 .lights__bulbs--white ellipse:nth-child(3n+1){
-    -webkit-animation: flash2-white 5s infinite; /* Safari 4+ */
-    -moz-animation:    flash2-white 5s infinite; /* Fx 5+ */
-    -o-animation:      flash2-white 5s infinite; /* Opera 12+ */
-    animation:         flash2-white 5s infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: whiteflash2 3s infinite; /* Safari 4+ */
+    -moz-animation:    whiteflash2 3s infinite; /* Fx 5+ */
+    -o-animation:      whiteflash2 3s infinite; /* Opera 12+ */
+    animation:         whiteflash2 3s infinite; /* IE 10+, Fx 29+ */
 }
 
 .lights__bulbs--white ellipse:nth-child(3n+2){
-    -webkit-animation: flash3-white 5s infinite; /* Safari 4+ */
-    -moz-animation:    flash3-white 5s infinite; /* Fx 5+ */
-    -o-animation:      flash3-white 5s infinite; /* Opera 12+ */
-    animation:         flash3-white 5s infinite; /* IE 10+, Fx 29+ */
+    -webkit-animation: whiteflash3 3s infinite; /* Safari 4+ */
+    -moz-animation:    whiteflash3 3s infinite; /* Fx 5+ */
+    -o-animation:      whiteflash3 3s infinite; /* Opera 12+ */
+    animation:         whiteflash3 3s infinite; /* IE 10+, Fx 29+ */
 }
 
 @keyframes flash1 {
@@ -114,20 +114,20 @@
   100% {opacity: 0.8; rx: 3.5; ry: 3.5;}
 }
 
-@keyframes flash1-white {
-  0% {opacity: 0.2; rx: 1; ry: 1;}
-  66% {opacity: 0.5; rx: 3; ry: 3;}
-  100% {opacity: 0.2; rx: 1; ry: 1;}
+@keyframes whiteflash1{
+  0% {opacity: 0.5;  rx: 5; ry: 5;}
+  66% {opacity: 0.1; rx: 1; ry: 1;}
+  100% {opacity: 0.5; rx: 5; ry: 5;}
 }
 
-@keyframes flash2-white {
-  0% {opacity: 0.2; rx: 1; ry: 1;}
-  33% {opacity: 0.5; rx: 3; ry: 3;}
-  100% {opacity: 0.2; rx: 1; ry: 1;}
+@keyframes whiteflash2 {
+  0% {opacity: 0.5;  rx: 5; ry: 5;}
+  33% {opacity: 0.1; rx: 1; ry: 1;}
+  100% {opacity: 0.5;  rx: 5; ry: 5;}
 }
 
-@keyframes flash3-white {
-  0% {opacity: 0.2; rx: 3; ry: 3;}
-  50% {opacity: 0.5; rx: 1; ry: 1;}
-  100% {opacity: 0.2; rx: 3; ry: 3;}
+@keyframes whiteflash3 {
+  0% {opacity: 0.1; rx: 1; ry: 1;}
+  50% {opacity: 0.5;  rx: 5; ry: 5;}
+  100% {opacity: 0.1; rx: 1; ry: 1;}
 }
