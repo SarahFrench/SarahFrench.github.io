@@ -1,4 +1,6 @@
 .Menu {
+    margin-top: 0.5em;
+    margin-bottom: 1em;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -6,20 +8,18 @@
     font-family: Muli, sans-serif;
     font-size: larger;
     font-weight: normal;
+    align-items: baseline;
 }
 
 .Menu * {
-    margin: 0 1em 1em 1em;
     text-decoration: none;
     color: #3E606D;
     font-size: inherit;
     font-weight: inherit;
-}
-
-.Menu .current {
-    text-decoration: underline;
+    margin: 0 1em 0 1em;
 }
 
 .Menu .current h1 {
+    text-decoration: underline;
     margin: 0;
 }
