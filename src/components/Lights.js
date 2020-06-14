@@ -1,6 +1,5 @@
 import React from "react"
-import Sun from "./Sun"
-import Moon from "./Moon"
+import LightsController from "./LightsController";
 import "./Lights.css"
 
 class Lights extends React.Component {
@@ -402,16 +401,7 @@ class Lights extends React.Component {
           <rect x="330" y="11.747" width="20" height="4.9531" />
           <rect x="380" y="11.747" width="20" height="4.9531" />
         </g>
-        <g
-          id="lights-controller"
-          className="controller"
-          transform={this.translate()}
-        >
-          {/* controller */}
-          <rect x="1.5" width="15" height="30" rx="7.5" y="244"></rect>
-        </g>
-        <Moon />
-        <Sun />
+        <LightsController translate={this.translate}/>
       </svg>
     )
   }
