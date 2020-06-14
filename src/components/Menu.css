@@ -5,14 +5,17 @@
     flex-wrap: wrap;
     font-family: Muli, sans-serif;
     font-size: larger;
+    font-weight: normal;
 }
 
-.Menu a {
+.Menu * {
     margin: 0 1em 1em 1em;
     text-decoration: none;
     color: #3E606D;
+    font-size: inherit;
+    font-weight: inherit;
 }
 
-.Menu a.current {
+.Menu .current {
     text-decoration: underline;
 }

@@ -22,13 +22,27 @@ export default function Menu(props) {
 
     const listItems = function(props){
 
+
         return links(props).map(link => {
-          return (
-              <Link key={link.text}
-                to={link.href}
-                className={link.className}>{link.text}
-              </Link>
-          )
+            if(link.className==="current"){
+                return (
+                  <Link
+                    className={link.className}
+                    key={link.text}
+                    to={link.href}
+                  >
+                    <h1>
+                        {link.text}
+                    </h1>
+                  </Link>
+                )
+            }else{
+                return (
+                    <Link key={link.text} to={link.href}>
+                        {link.text}
+                    </Link>
+                )
+            }
         })
     }
 
