@@ -1,12 +1,11 @@
 h1 {
     text-align: center;
     color: #FCAE49;
-    font-family: sans-serif;
+    font-family: Muli, Roboto, sans-serif;
     font-size: xxx-large;
 }
 
-@media screen and (min-width: 500px){
-    h1 {
-        /* stuff */
-    }
+@font-face {
+  font-family: "Muli";
+  src: url("../fonts/Muli-VariableFont_wght.ttf");
 }
