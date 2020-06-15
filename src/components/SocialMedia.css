@@ -1,0 +1,23 @@
+.socialMedia__container {
+    /* position: relative;
+    left: 16px;
+    top: -156px;
+    margin-left: auto; */
+    position: absolute;
+    width: 100vw;
+    top: 100px;
+    text-align: right;
+}
+
+@media screen and (min-width: 500px){
+    .socialMedia__container {
+        width: 90vw;
+        margin: 0 4em 0 0;
+ 
+    }
+}
+
+.socialMedia__item {
+    font-size: xxx-large;
+    color: white;
+}

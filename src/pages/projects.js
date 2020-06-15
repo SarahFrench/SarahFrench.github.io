@@ -5,14 +5,15 @@ import Menu from "../components/Menu"
 import Lights from "../components/Lights"
 
 
-export default function Home() {
+export default function Projects() {
+
     return (
       <div>
         <Lights />
-            <PageContainer>
-                <Menu currentPage="About" />
-                <p>This is my website I'm making using GatsbyJS</p>
-            </PageContainer>
+        <PageContainer>
+          <Menu currentPage="Projects" />
+          <p>Eventually I'll get round to populating this page</p>
+        </PageContainer>
       </div>
     )
 }

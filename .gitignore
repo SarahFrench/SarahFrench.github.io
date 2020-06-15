@@ -1,3 +1,5 @@
+*.svg
+semantic/src/*
 node_modules
 
 # Logs
