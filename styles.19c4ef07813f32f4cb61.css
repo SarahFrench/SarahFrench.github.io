@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin&display=swap);.Title{text-align:center;color:#fcae49;font-family:Muli,Roboto,sans-serif;font-size:xxx-large}.socialMedia__container{position:absolute;width:100vw;top:100px;text-align:right}@media screen and (min-width:500px){.socialMedia__container{width:90vw;margin:0 4em 0 0}}.socialMedia__item{font-size:xxx-large;color:#fff}
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic&subset=latin&display=swap);.Title{text-align:center;color:#fcae49;font-family:Muli,Roboto,sans-serif;font-size:3.5em}.socialMedia__container{position:absolute;width:100vw;top:100px;text-align:right}@media screen and (min-width:500px){.socialMedia__container{width:90vw;margin:0 4em 0 0}}.socialMedia__item{font-size:3.5em;color:#fff}
 /*!
  * # Fomantic-UI - Reset
  * http://github.com/fomantic/Fomantic-UI/
