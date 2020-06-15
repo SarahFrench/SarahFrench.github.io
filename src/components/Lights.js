@@ -7,7 +7,7 @@ class Lights extends React.Component {
     super(props)
     this.state = {
       svgRef: React.createRef(),
-      width: window.innerWidth,
+      width: "100vw",
       height: "100vh",
       viewBox: {
         x: 0,
@@ -20,14 +20,24 @@ class Lights extends React.Component {
 
   componentDidMount = () => {
     this.handleSvgDimensions()
-    window.addEventListener("resize", this.handleSvgDimensions);
+    try{
+      window.addEventListener("resize", this.handleSvgDimensions);
+      this.setState({ width: window.innerWidth })
+
+    } catch(err){
+      console.log(err)
+    }
   }
 
   handleSvgDimensions = () => {
-    this.setState({
-      height: window.innerHeight,
-      width: window.innerWidth,
-    })
+    try{
+        this.setState({
+          height: window.innerHeight,
+          width: window.innerWidth,
+        });
+    }catch(err){
+      console.log(err);
+    }
   }
 
   viewboxSettings = () => {
@@ -40,8 +50,12 @@ class Lights extends React.Component {
     let offsetX = 0
     let offsetY = 0
 
-    if (window.innerWidth < 500) {
-      offsetX = -100
+    try {
+      if (window && window.innerWidth < 500) {
+        offsetX = -100
+      }
+    } catch (err) {
+      console.log(err)
     }
 
     return `translate(${offsetX},${offsetY})`
