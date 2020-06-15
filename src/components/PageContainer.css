@@ -1,5 +1,5 @@
 .PageContainer {
-    margin: 150px 0.5em 0 0.5em;
+    margin: 150px 0.5em 0.5em 0.5em;
     padding: 2em 10px;
 
     background-color: #FFFFFE;
@@ -13,8 +13,8 @@
 
 @media screen and (min-width: 500px){
     .PageContainer {
-            margin: 150px 4em 1em 4em;
-            padding: 2em 10px;
+            margin: 150px 4em 4em 4em;
+            padding: 2em 4em;
             max-width: 90vw;    
     }
 }

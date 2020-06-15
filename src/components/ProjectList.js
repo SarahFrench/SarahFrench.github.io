@@ -73,7 +73,7 @@ export default function ProjectList() {
             <div>
               <Icon name="js square" />
               <Icon name="node" />
-              <span>Mocha & Chai</span>
+              <span> Mocha & Chai</span>
             </div>
           }
         />

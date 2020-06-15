@@ -1,0 +1,12 @@
+.SectionLayout{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+}
+
+@media screen and (min-width: 500px){
+    .SectionLayout {
+            flex-direction: row;
+            justify-content: space-between;
+    }
+}
