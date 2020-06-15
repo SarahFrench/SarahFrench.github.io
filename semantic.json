@@ -19,7 +19,8 @@
   "autoInstall": true,
   "rtl": false,
   "components": [
-    "icon"
+    "icon",
+    "card"
   ],
   "version": "2.8.5"
 
