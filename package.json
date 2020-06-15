@@ -7,6 +7,7 @@
     "fomantic-ui-css": "^2.8.5",
     "gatsby": "^2.20.21",
     "gatsby-plugin-less": "^3.1.1",
+    "gatsby-plugin-react-helmet": "^3.3.4",
     "gulp": "^4.0.2",
     "less": "^3.11.1",
     "react": "^16.13.1",
