@@ -13,7 +13,15 @@
 
 @media screen and (min-width: 500px){
     .PageContainer {
-        margin: 150px 4em 4em 4em;
+        margin: 150px 4em 4em 5em;
+        padding: 2em 4em;
+        max-width: 90vw;    
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .PageContainer {
+        margin: 150px 5em 4em 6em;
         padding: 2em 4em;
         max-width: 90vw;    
     }
