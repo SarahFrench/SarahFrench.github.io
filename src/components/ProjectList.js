@@ -7,12 +7,10 @@ import { Card, Icon } from "semantic-ui-react"
 
 export default function ProjectList() {
   return (
-    <div className="ProjectList">
       <Card.Group
-        className="ProjectDeck"
-        itemsPerRow="2"
+        className="ProjectList"
         stackable="true"
-        style={{ marginTop: "1em" }}
+        style={{ marginTop: "1em", justifyContent: "center" }}
       >
         <Card
           className="ProjectList__item"
@@ -78,6 +76,5 @@ export default function ProjectList() {
           }
         />
       </Card.Group>
-    </div>
   )
 }

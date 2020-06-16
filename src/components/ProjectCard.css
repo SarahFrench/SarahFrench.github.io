@@ -1,3 +1,5 @@
-.ProjectList__item.ui.card {
-    max-width: 20vw;
+@media screen and (min-width: 500px){
+    .ProjectList__item.ui.card {
+        max-width: 30vw;
+    }
 }

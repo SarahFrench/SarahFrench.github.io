@@ -12,7 +12,7 @@ function SectionLanguages(props){
           <Icon name="html5"/>
           <Icon name="css3 alternate"/>
           <Icon name="js square"/>
-          <Icon name="node js"/>
+          <Icon name="node"/>
           <Icon name="docker"/>
           <Icon name="aws"/>
         </div>
