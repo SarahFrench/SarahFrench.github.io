@@ -3,7 +3,7 @@ import React from "react"
 import PageContainer from "../components/PageContainer"
 import Menu from "../components/Menu"
 import Lights from "../components/Lights"
-import Section from "../components/Section"
+import SectionAboutMe from "../components/SectionAboutMe"
 import SectionLanguages from "../components/SectionLanguages"
 import SectionLayout from "../components/SectionLayout"
 
@@ -15,7 +15,7 @@ export default function Home() {
         <PageContainer>
           <Menu currentPage="About" />
           <SectionLayout>
-            <Section />
+            <SectionAboutMe />
             <SectionLanguages />
           </SectionLayout>
         </PageContainer>
