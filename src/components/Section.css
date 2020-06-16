@@ -20,12 +20,12 @@
     left: -0.25em;
     font-size: 2em;
     transform: rotate(-5deg);
-    width: 120%;
+    width: 60%;
 }
 
 .Section__icons {
     text-align: right;
-    margin-top: -1.5em;
+    margin-top: -2em;
     font-size: 1.5em;
 }
 
@@ -33,6 +33,7 @@
     .Section {
         width: 40%;
         align-self: stretch;
+        margin: 1em;
     }
     
     .Section__header{
@@ -41,8 +42,5 @@
         width: 100%;
     }
 
-    .Section__icons {
-        margin-top: -2em;
-    }
 }
 
