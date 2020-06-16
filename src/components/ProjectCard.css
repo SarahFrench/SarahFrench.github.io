@@ -3,3 +3,7 @@
         max-width: 30vw;
     }
 }
+
+.ProjectList__item .extra.content i {
+    font-size: 2em;
+}
