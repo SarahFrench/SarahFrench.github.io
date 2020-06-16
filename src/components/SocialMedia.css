@@ -13,7 +13,13 @@
     .socialMedia__container {
         width: 90vw;
         margin: 0 4em 0 0;
- 
+    }
+}
+
+@media screen and (min-width: 1500px){
+    .socialMedia__container {
+        width: 90vw;
+        margin: 0 5em 0 0;
     }
 }
 
