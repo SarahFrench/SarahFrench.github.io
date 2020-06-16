@@ -6,5 +6,11 @@
 
 module.exports = {
   /* Your site config here */
-  plugins: [],
+  siteMetadata: {
+    title: `Sarah French`,
+    siteUrl: `https://sarahfrench.github.io/`,
+    description: `Sarah French's portfolio website`,
+  },
+  plugins: [
+  ],
 }
