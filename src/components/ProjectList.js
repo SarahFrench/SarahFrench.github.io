@@ -9,7 +9,7 @@ export default function ProjectList() {
   return (
       <Card.Group
         className="ProjectList"
-        stackable="true"
+        stackable={true}
         style={{ marginTop: "1em", justifyContent: "center" }}
       >
         <Card
