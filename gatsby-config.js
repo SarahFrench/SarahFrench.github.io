@@ -7,9 +7,9 @@
 module.exports = {
   /* Your site config here */
   siteMetadata: {
-    title: `Sarah French`,
+    title: `Fairy Lights`,
     siteUrl: `https://sarahfrench.github.io/`,
-    description: `Sarah French's portfolio website`,
+    description: `Fairy Lights web design`,
   },
   plugins: [
   ],

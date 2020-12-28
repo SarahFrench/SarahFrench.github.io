@@ -1,18 +1,12 @@
 import React from "react"
 
 import Layout from "../components/Layout"
-import SectionAboutMe from "../components/SectionAboutMe"
-import SectionLanguages from "../components/SectionLanguages"
-import SectionLayout from "../components/SectionLayout"
 
 
 export default function Home() {
     return (
-      <Layout currentPage="About">
-        <SectionLayout>
-          <SectionAboutMe />
-          <SectionLanguages />
-        </SectionLayout>
+      <Layout>
+        <p>This is a cute webpage design I made to look like fairy lights, using an SVG and CSS animations</p>
       </Layout>
     )
 }

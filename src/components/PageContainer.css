@@ -2,13 +2,20 @@
     margin: 150px 0.5em 0.5em 0.5em;
     padding: 2em 10px;
 
-    background-color: #FFFFFE;
     border-radius: 10px 10px 0 0;
     min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+}
+
+.PageContainer.light {
+    background-color: #FFFFFE;
+}
+
+.PageContainer.dark {
+    background-color: #FFFFFE;
 }
 
 @media screen and (min-width: 500px){
