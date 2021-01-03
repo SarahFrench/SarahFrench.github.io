@@ -1,5 +1,5 @@
 import React from "react"
-import LightsController from "./LightsController";
+import LightsController from "./LightsController"
 import "./Lights.css"
 
 class Lights extends React.Component {
@@ -14,29 +14,28 @@ class Lights extends React.Component {
         y: 0,
         width: 530, //values come from Inkscape
         height: 280,
-      }
+      },
     }
   }
 
   componentDidMount = () => {
     this.handleSvgDimensions()
-    try{
-      window.addEventListener("resize", this.handleSvgDimensions);
+    try {
+      window.addEventListener("resize", this.handleSvgDimensions)
       this.setState({ width: window.innerWidth })
-
-    } catch(err){
+    } catch (err) {
       console.log(err)
     }
   }
 
   handleSvgDimensions = () => {
-    try{
-        this.setState({
-          height: window.innerHeight,
-          width: window.innerWidth,
-        });
-    }catch(err){
-      console.log(err);
+    try {
+      this.setState({
+        height: window.innerHeight,
+        width: window.innerWidth,
+      })
+    } catch (err) {
+      console.log(err)
     }
   }
 
@@ -415,7 +414,7 @@ class Lights extends React.Component {
           <rect x="330" y="11.747" width="20" height="4.9531" />
           <rect x="380" y="11.747" width="20" height="4.9531" />
         </g>
-        <LightsController translate={this.translate}/>
+        <LightsController translate={this.translate} />
       </svg>
     )
   }

@@ -1,6 +1,6 @@
 # SarahFrench.github.io
-## Running on Gatsby.js, via GitHub pages, using Travis.
 
+## Running on Gatsby.js, via GitHub pages, using Travis.
 
 ## How to run locally
 

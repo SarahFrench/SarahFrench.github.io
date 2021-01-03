@@ -11,6 +11,5 @@ module.exports = {
     siteUrl: `https://sarahfrench.github.io/`,
     description: `Fairy Lights web design`,
   },
-  plugins: [
-  ],
+  plugins: [],
 }
