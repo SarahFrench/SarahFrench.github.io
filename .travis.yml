@@ -6,8 +6,6 @@ node_js:
 cache:
     directories:
     - node_modules
-script:
-  - echo "hello world"
 deploy:
   provider: script
   script: npm install && npm run deploy
