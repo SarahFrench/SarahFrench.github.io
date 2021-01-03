@@ -7,7 +7,7 @@
 Navigate to the project root and run:
 
 ```shell
-gatsby develop //starts the server
+$ gatsby develop
 ```
 
-The site will be running at `http://localhost:8000`
+This starts the server and the site will be available at `http://localhost:8000`
