@@ -25,7 +25,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 0",
-    "deploy": "gatsby build && gh-pages -d public -b master -r https://$github_token@github.com/SarahFrench/SarahFrench.github.io.git"
+    "deploy": "gatsby clean && gatsby build && gh-pages -d public -b master -r https://$github_token@github.com/SarahFrench/SarahFrench.github.io.git"
   },
   "repository": {
     "type": "git",
