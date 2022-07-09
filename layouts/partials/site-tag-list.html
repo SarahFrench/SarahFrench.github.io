@@ -1,0 +1,15 @@
+<section class=" styled-font">
+    <h1>Tags</h1>
+    <div class="tag-list__list">
+
+        {{range $taxonomyname, $taxonomy := .Site.Taxonomies}}
+            {{ range $key, $value := $taxonomy }}
+            <a href="{{ "/tags/" | relLangURL}}{{ . | urlize }}">
+                <div class="tag-list__item">
+                    {{$key}}
+                </div>
+            </a>
+            {{end}}
+        {{end}}
+    </div>
+</section>

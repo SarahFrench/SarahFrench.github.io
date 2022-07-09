@@ -1,0 +1,7 @@
+<div class="tag-list__list styled-font">
+    {{ range .Params.tags }}
+    <a class="tag-list__item" href="{{ "/tags/" | relLangURL}}{{ . | urlize }}">
+        {{ . }}
+    </a>
+    {{ end }}
+</div>

@@ -1,0 +1,96 @@
+{
+    "baseURL": "http://localhost:1313/",
+    "languageCode": "en-uk",
+    "title": "Sarah French",
+    "sectionPagesMenu": "main",
+    "taxonomies": {
+        "tag": "tags"
+    },
+    "menu": {
+        "social": [
+            {
+                "identifier": "linkedin",
+                "title": "LinkedIn",
+                "name": "LinkedIn",
+                "url": "https://www.linkedin.com/in/sarah-m-french/",
+                "weight": 1,
+                "params": {
+                    "logo": "fa/linkedin.svg",
+                    "title": "My LinkedIn profile"
+                }
+            },
+            {
+                "identifier": "github",
+                "title": "GitHub",
+                "name": "GitHub",
+                "url": "https://github.com/SarahFrench",
+                "weight": 1,
+                "params": {
+                    "logo": "fa/github.svg",
+                    "title": "My GitHub profile"
+                }
+            }
+        ]
+    },
+    "markup": {
+        "asciidocExt": {
+            "attributes": {},
+            "backend": "html5",
+            "extensions": [],
+            "failureLevel": "fatal",
+            "noHeaderOrFooter": true,
+            "preserveTOC": false,
+            "safeMode": "unsafe",
+            "sectionNumbers": false,
+            "trace": false,
+            "verbose": false,
+            "workingFolderCurrent": false
+        },
+        "defaultMarkdownHandler": "goldmark",
+        "goldmark": {
+            "extensions": {
+                "definitionList": true,
+                "footnote": true,
+                "linkify": true,
+                "linkifyProtocol": "https",
+                "strikethrough": true,
+                "table": true,
+                "taskList": true,
+                "typographer": true
+            },
+            "parser": {
+                "attribute": {
+                    "block": false,
+                    "title": true
+                },
+                "autoHeadingID": true,
+                "autoHeadingIDType": "github"
+            },
+            "renderer": {
+                "hardWraps": false,
+                "unsafe": true,
+                "xhtml": false
+            }
+        },
+        "highlight": {
+            "anchorLineNos": false,
+            "codeFences": true,
+            "guessSyntax": false,
+            "hl_Lines": "",
+            "hl_inline": false,
+            "lineAnchors": "",
+            "lineNoStart": 1,
+            "lineNos": false,
+            "lineNumbersInTable": true,
+            "noClasses": true,
+            "noHl": false,
+            "style": "dracula",
+            "tabWidth": 4
+        },
+        "tableOfContents": {
+            "endLevel": 3,
+            "ordered": false,
+            "startLevel": 2
+        }
+    }
+}

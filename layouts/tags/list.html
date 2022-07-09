@@ -1,0 +1,48 @@
+{{ define "main" }}
+<article>
+    <section>
+        <h1 class="tag-index__title">
+            Blogs tagged with: {{.Params.Title}}
+        </h1>
+        {{ $blogTagged := where .Pages "Section" "blog" }}
+        {{ $blogCount := len $blogTagged }}
+        {{if gt $blogCount 0}}
+        <ul class="tag-index__list">
+            {{ range where .Pages "Section" "blog" }}
+            <li class="tag-index__link">
+                <a href="{{.Permalink}}">
+                    {{.Title}}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+        {{ else }}
+        <p>No blogs tagged</p>
+        {{ end }}
+    </section>
+    <section>
+        <h1 class="tag-index__title">
+            Projects tagged with: {{.Params.Title}}
+        </h1>
+        {{ $projectsTagged := where .Pages "Section" "project" }}
+        {{$projectCount := len $projectsTagged}}
+        {{if gt $projectCount 0}}
+        <ul class="tag-index__list">
+        {{ range where .Pages "Section" "project" }}
+            <li class="tag-index__link">
+                <a href="{{.Permalink}}">
+                    {{.Title}}
+                </a>
+            </li>
+            {{ end }}
+        </ul>
+        {{ else }}
+        <p>No projects tagged</p>
+        {{ end }}
+    </section>
+</article>
+{{ end }}
+
+{{ define "hero" }}
+{{ partial "hero/pink-lines.svg" }}
+{{ end }}

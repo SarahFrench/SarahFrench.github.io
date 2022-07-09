@@ -1,0 +1,34 @@
+.project-preview__container {
+    margin-bottom: 2rem;
+}
+
+.project-preview__title {
+    font-size: 3rem;
+    margin-block-end: 0.5rem;
+    color: var(--white);
+    text-decoration: none;
+    width: fit-content;
+
+    &:link {
+        text-decoration: none;
+    }
+
+    &:visited {
+        text-decoration: none;
+    }
+
+    &:hover {
+        text-decoration: none;
+        color: var(--yellow);
+    }
+
+    &:active {
+        text-decoration: none;
+    }
+}
+
+.project-preview__subtitle {
+    margin-block-start: 0.5rem;
+    margin-block-end: 0.5rem;
+    color: var(--purple);
+}

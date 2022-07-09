@@ -1,0 +1,52 @@
+@import "colours";
+
+.tag-list__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding-inline-start: 0px;
+    flex-wrap: wrap;
+}
+
+.tag-list__item {
+    display: block;
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+
+    background-color: var(--blue-black);
+    border-radius: 5px;
+    border: 1px solid var(--pink);
+    padding: 0.25rem 0.5rem;
+    
+    color: var(--pink);
+    text-decoration: none;
+
+    &:hover {
+        border-color: var(--yellow);
+        color: var(--yellow)
+    }
+}
+
+.tag-index__title {
+    font-family: var(--stylised-font);
+    font-size: 3rem;
+    color: var(--purple);
+    text-decoration: none;
+    width: fit-content;
+}
+
+.tag-index__list {
+    list-style-type: disclosure-closed;
+}
+
+.tag-index__link {
+
+    margin-bottom: 0.5rem;
+    &::marker {
+        color: var(--pink)
+    }
+
+    & a {
+        color: inherit;
+    }
+}

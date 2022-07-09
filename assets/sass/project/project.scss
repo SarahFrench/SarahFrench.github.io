@@ -1,0 +1,38 @@
+.project-page__caption {
+    text-align: center;
+    color: var(--purple);
+}
+
+// Styling markdown generated HTML; easier to use HTML tags scoped inside a single class
+
+.project-page h1,
+.project-page h2,
+.project-page h3,
+.project-page h4 {
+    font-family: var(--stylised-font);
+}
+
+.project-page h1 {
+    // Shouldn't be used though!
+    font-size: 2.5rem;
+}
+
+.project-page h2 {
+    font-size: 2.5rem;
+}
+
+.project-page h3 {
+    font-size: 2rem;
+}
+
+.project-page h4 {
+    font-size: 1.75rem;
+}
+
+.project-page img {
+    width: 100%;
+}
+
+.project-page a:not(.tag-list__item) {
+    color: inherit;
+}

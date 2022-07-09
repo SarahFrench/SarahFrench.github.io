@@ -1,0 +1,16 @@
+<nav id="menu" class="nav">
+    {{ $currentPage := . }}
+    {{ range .Site.Menus.main }}
+    <a {{ if $currentPage.IsMenuCurrent "main" . }}aria-current="page" {{end}}
+        class='{{ if $currentPage.IsMenuCurrent "main" . }}active-menu-item{{end}} nav-link' href="{{ .URL }}"
+        title="{{.Title}}">
+        {{.Name}}
+    </a>
+    {{end}}
+    <!-- {{ range .Site.Menus.social }}
+    <a class="mr-3 self-center" rel="noopener noreferrer nofollow" target="_blank" href="{{ .URL }}"
+        title="{{.Params.Title}}">
+        {{ partial (.Params.Logo)}}
+    </a>
+    {{end}} -->
+</nav>

@@ -1,0 +1,15 @@
+{{ define "main" }}
+    {{ partial "list-page-title" . }}
+
+    {{ $paginator := .Paginate (where .Pages "Type" "project") 10 }}
+    {{ range $paginator.Pages.ByDate.Reverse }}
+    {{ $project := . }}
+    {{ partial "project/preview" $project }}
+    {{ end }}
+    <!-- Internal pagination template in Hugo -->
+    {{ template "_internal/pagination.html" . }}
+{{ end }}
+
+{{ define "hero" }}
+    {{ partial "hero/pink-lines.svg" }}
+{{ end }}

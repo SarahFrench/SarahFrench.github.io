@@ -1,0 +1,46 @@
+{{ define "hero" }}
+{{ partial "hero/hero-image.svg" }}
+{{ end }}
+
+{{ define "main" }}
+<section class="container">
+    <div class="container-section container-section--left container-section--image centre-xy">
+        {{ $headshot := resources.Get "image/headshot-resize.jpeg" }}
+        {{ $gcp := resources.Get "image/gcp.jpeg" }}
+        {{ $go := resources.Get "image/go.jpeg" }}
+        <div class="headshot__photo" style="background-image:url({{$headshot.Permalink}});">
+            <div class="circle circle--top-right circle--small">
+                {{ partial "svg/terraform-logo.svg" }}
+            </div>
+            <div class="circle circle--mid-right circle--large">
+                {{ partial "svg/gcp-logo.svg" }}
+            </div>
+            <div class="circle circle--low-right circle--large">
+                </>
+            </div>
+        </div>
+    </div>
+    <div class="container-section container-section--right">
+        <h1 class="section__title">
+            {{.Params.Introduction.Heading}}
+        </h1>
+        {{range .Params.Introduction.Paragraphs}}
+            <p>{{.}}</p>
+        {{end}}
+    </div>
+</section>
+<section class="container">
+    <div class="container-section container-section--left">
+        <h1 class="section__title">
+            {{.Params.BlogText.Heading}}
+        </h1>
+        {{range .Params.BlogText.Paragraphs}}
+        <p>{{.}}</p>
+        {{end}}
+    </div>
+    <div class="container-section container-section--right container-section--image">
+        {{ partial "svg/sparkle.svg"}}
+        {{ partial "svg/book.svg" }}
+    </div>
+</section>
+{{ end }}

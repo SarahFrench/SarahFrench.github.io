@@ -1,0 +1,13 @@
+<article class="project-page">
+    {{ partial "shared/tags" . }}
+    <header>
+        <h1 class="styled-font page-title">
+            {{.Title}}
+        </h1>
+        {{ if .Params.Image}}
+        {{ $image := resources.Get .Params.Image }}
+        <img class="project__hero-image" src="{{$image.Permalink}}">
+        {{ end }}
+    </header>
+    {{.Content}}
+</article>

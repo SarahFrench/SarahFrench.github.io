@@ -1,0 +1,77 @@
+@import 'colours';
+
+path {
+    stroke-width: 1px;
+    fill: none;
+}
+
+// Moon & Stars
+
+.moon-shine {
+    filter: drop-shadow(0px 0px 10px var(--white));
+}
+
+.moon-shadow {
+    fill: var(--blue-black);
+}
+
+.moon-white {
+    fill: var(--white);
+}
+
+.moon-yellow {
+    fill: var(--yellow);
+}
+
+.star ellipse {
+    fill: var(--yellow);
+    filter: drop-shadow(0px 0px 10px var(--yellow));
+}
+
+.orion {
+    ellipse {
+        filter: drop-shadow(0px 0px 10px var(--yellow));
+        fill: var(--yellow);
+    }
+    path {
+        stroke: var(--purple);
+    }
+}
+
+
+// Floor
+
+.floor-horizontal {
+    stroke: var(--purple);
+}
+
+.floor-horizon-line {
+    stroke-width: 2px;
+    filter: drop-shadow(0px 0px 5px var(--purple));
+
+}
+
+.floor-shine path {
+    filter: drop-shadow(0px 0px 5px var(--pink));
+    stroke-width: 2px;
+}
+
+.cloud-scroll {
+    -webkit-animation: cloud-scroll 60s infinite linear;
+    animation: cloud-scroll 60s infinite linear;
+}
+
+.cloud-scroll-rev {
+  -webkit-animation: cloud-scroll-rev 60s infinite linear;
+  animation: cloud-scroll-rev 60s infinite linear;
+}
+
+@keyframes cloud-scroll {
+    0%  {-webkit-transform: translateX(-10vw);}
+    100% {-webkit-transform: translateX(10vw);}
+}
+
+@keyframes cloud-scroll-rev {
+    0% {-webkit-transform: translateX(10vw);}
+    100%  {-webkit-transform: translateX(-10vw);}
+}

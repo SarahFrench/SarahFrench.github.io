@@ -1,0 +1,6 @@
+<article class="project-preview__container">
+    <a class="project-preview__title styled-font" href="{{.Permalink}}">
+        <h2 class="project-preview__title">{{.Title}}</h2>
+    </a>
+    <p class="project-preview__subtitle">{{ .Date | time.Format ":date_long" }}</p>
+</article>

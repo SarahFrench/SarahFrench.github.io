@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+    </style>
+    {{ $sass := resources.Get "sass/main.scss" | resources.ToCSS}}
+    <link rel="stylesheet" href="{{ $sass.Permalink }}">
+    <script>
+        // Adapted from: https://css-tricks.com/how-to-detect-when-a-sticky-element-gets-pinned/
+
+        document.addEventListener("DOMContentLoaded", () =>{
+            // get the sticky element
+            const el = document.querySelector('#menu')
+            
+            const observer = new IntersectionObserver(
+                // callback argument
+                (entries, observer) => {
+                    console.log("callback fired")
+                    const e = entries[0]
+                    e.target.classList.toggle('nav--pinned', e.intersectionRatio < 1)
+                },
+                // options
+                {
+                    threshold: [1]
+                }
+            );
+                
+            observer.observe(el)
+        })
+    </script>
+
+    <title>
+        {{.Page.Title}} | {{ .Site.Title }}
+    </title>
+</head>
+
+<body>
+    {{partial "menu" .}}
+    {{ block "hero" . }}
+    {{ end }}
+    <div class="main-wrapper  {{ if .IsHome }}main-wrapper--home{{else}}main-wrapper--subpage{{end}}">
+        <main class="main-content">
+            {{ block "main" . }}
+            {{ end }}
+        </main>
+    </div>
+    
+    {{partial "footer"}}
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+@import 'breakpoints';
+
+:root {
+    --stylised-font: 'VT323';
+}
+
+.hero{
+    z-index: -1;
+}
+
+.styled-font {
+    font-family: var(--stylised-font);
+}
+
+.page-title {
+    text-align: center;
+    font-family: var(--stylised-font);
+    font-size: $small-title-size;
+    color: var(--purple);
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .page-title {
+        font-size: $large-title-size;
+    }
+}
+
+.nav {
+    // Stickiness
+    z-index: 1;
+    position: sticky;
+    top: -1px;
+    left: 0px;
+
+    // Control contents layout
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+
+    // Colour and style
+    font-family: var(--stylised-font);
+    background-color: var(--blue-black);
+}
+
+.nav--pinned .nav-link {
+    color: var(--purple);
+}
+
+.nav-link {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .nav {
+        justify-content: flex-end;
+    }
+    .nav-link {
+        margin-right: 3rem;
+        font-size: 3rem;
+    }
+}
+
+.main-wrapper {
+    // Positioning and margin
+    position: relative;
+    left: 3vw;
+    width: 94vw; // 100 - 2*3
+    margin-bottom: 2rem;
+    box-sizing: inherit;
+
+    // Design
+    box-shadow: 0px 0px 5px 5px var(--pink);
+    background-color: var(--blue-black);
+
+    // Top position depends on the hero image shown (home vs. not-home)
+    &--home {
+        top: calc(-30vw + 100px); // YOLO calc works across devices
+    }
+    &--subpage {
+        top: calc(-10vw + 50px); 
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .main-wrapper {
+        // Positioning and margin
+        left: 15vw;
+        width: 70vw;  // 100 - 2*15
+        margin-bottom: 3rem;
+    }
+}
+
+.main-content {
+    // Colours
+    background-color: var(--blue-black);
+    color: var(--white);
+
+    // Padding and sizing
+    padding: 2rem 1rem 3rem 1rem;
+    min-height: 75vh;
+    box-sizing: inherit;
+
+    
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .main-content {
+        // Padding and sizing
+        padding: 3rem 2rem 5rem 2rem;
+        min-height: 50vh;
+    }
+}
+
+.footer {
+
+    // Position and dimensions
+    width: 100%;
+    
+    &__text {
+        // Text formatting and colour
+        padding-right: 1rem;
+        // opacity: 0.5;
+        text-align: right;
+        font-family: Arial, Helvetica, sans-serif;
+        color: var(--purple);
+
+        // Specific styling on footer link to make it discrete
+        & a {
+            color: inherit;
+        }
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    box-sizing: inherit;
+
+    min-height: 25vh;
+    height: fit-content;
+    margin-bottom: 5rem;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.centre-xy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-section {
+
+    width: 100%;
+    flex-grow: 1;
+
+    box-sizing: inherit;
+    padding: 1rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &--left {
+        //Default to top
+        order: 1;
+    }
+    &--right {
+        //Default to bottom
+        order: 2;
+    }
+    &--image {
+        padding: 0;
+
+        //Default to top
+        order: 0;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .container-section {
+        width: 50%;
+        padding: 1rem 3rem;
+
+        &--image {
+            padding: 0;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .container{
+        flex-direction: row;
+    }
+
+    .container-section--left {
+        order: 1;
+    }
+
+    .container-section--right {
+        order: 2;
+    }
+}
+
+.inline-image {
+    width: 100%;
+}
+
+code {
+    padding: 1rem;
+    display: block;
+    overflow-y: scroll;
+}
+
+.code-inline {
+    font-family: monospace;
+    color: inherit;
+}

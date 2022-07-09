@@ -1,0 +1,16 @@
+{{ define "main" }}
+    {{ partial "list-page-title" . }}
+    <!-- {{ partial "site-tag-list" . }} -->
+
+    {{ $paginator := .Paginate (where .Pages "Type" "blog") 10 }}
+    {{ range $paginator.Pages.ByDate.Reverse }}
+        {{ $blogPost := . }}
+        {{ partial "blog/preview" $blogPost }}
+    {{ end }}
+    <!-- Internal pagination template in Hugo -->
+    {{ template "_internal/pagination.html" . }}
+{{ end }}
+
+{{ define "hero" }}
+    {{ partial "hero/pink-lines.svg" }}
+{{ end }}

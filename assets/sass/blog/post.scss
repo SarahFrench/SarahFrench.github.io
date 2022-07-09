@@ -1,0 +1,30 @@
+.blog__date {
+    color: var(--purple);
+}
+
+// Styling markdown generated HTML; easier to use HTML tags scoped inside a single class
+
+.blog-post h1,
+.blog-post h2,
+.blog-post h3,
+.blog-post h4 {
+    font-family: var(--stylised-font);
+}
+
+.blog-post h1 {
+    // Shouldn't be used though!
+    font-size: 2.5rem;
+}
+.blog-post h2 {
+    font-size: 2.5rem;
+}
+.blog-post h3 {
+    font-size: 2rem;
+}
+.blog-post h4 {
+    font-size: 1.75rem;
+}
+
+.blog-post img {
+    width: 100%;
+}

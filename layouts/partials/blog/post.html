@@ -1,0 +1,10 @@
+<article class="blog-post">
+    {{ partial "shared/tags" . }}
+    <header>
+        <h1 class="styled-font page-title">
+            {{.Title}}
+        </h1>
+    </header>
+    <p class="blog__date">{{ .Date | time.Format ":date_long" }}</p>
+    {{.Content}}
+</article>

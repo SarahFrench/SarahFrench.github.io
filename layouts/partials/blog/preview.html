@@ -1,0 +1,9 @@
+<article class="blog-preview__container">
+    <a class="blog-preview__title styled-font" href="{{.Permalink}}">
+        <h2 class="blog-preview__title">{{.Title}}</h2>
+    </a>
+    <p class="blog-preview__subtitle">{{ .Date | time.Format ":date_long" }}</p>
+    <section class="blog-preview__snippet">
+        {{ .Content | truncate 250 }}
+    </section>
+</article>

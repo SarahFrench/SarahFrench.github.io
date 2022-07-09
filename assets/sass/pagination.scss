@@ -1,0 +1,52 @@
+// TODO(SarahFrench) - make more responsive
+
+.pagination {
+    margin-top: 3rem;
+    border-top: var(--purple) 2px solid;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-end;
+
+    // Is coming from the template?
+    // Unset to allow absolute positioning
+    padding: 0;
+    margin-bottom: 2rem;
+}
+
+.page-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    height: 2rem;
+    width: 2rem;
+    border-radius: 5px;
+
+    & a {
+        text-decoration: none;
+    }
+
+    &.active,
+    &.disabled {
+        opacity: 0.5;
+        background-color: var(--blue-black);
+        border: 1px solid var(--pink);
+        cursor: default;
+        & a {
+            color: var(--pink);
+        }
+    }
+    
+    &:not(active){
+        cursor: pointer;
+        border: 1px solid var(--pink);
+        
+        & a {
+            color: var(--pink);
+        }
+    }
+}

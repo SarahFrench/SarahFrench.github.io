@@ -1,0 +1,12 @@
+{{ define "main" }}
+<p>{{.Params.Title}} foo</p>
+<!-- Need to change this page to be generic -->
+<!-- {{ range .Paginator.Pages }}
+    {{ $blogPost := . }}
+    {{ partial "blog/preview" $blogPost }}
+{{ end }} -->
+{{ end }}
+
+{{ define "hero" }}
+{{ partial "hero/pink-lines.svg" }}
+{{ end }}
