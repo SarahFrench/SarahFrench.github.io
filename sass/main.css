@@ -212,9 +212,12 @@ path {
   width: 100%; }
 
 code {
+  font-size: inherit;
   padding: 1rem;
   display: block;
   overflow-y: scroll; }
+  code span {
+    font-size: inherit; }
 
 .code-inline {
   font-family: monospace;
