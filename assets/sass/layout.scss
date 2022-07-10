@@ -219,15 +219,7 @@ code {
     display: block;
     overflow-y: scroll;
     
-    & span {
-        font-size: inherit;
-    }
-    & span span {
-        font-size: inherit;
-    }
-    & span span span {
-        font-size: inherit;
-    }
+    -webkit-text-size-adjust: none;
 }
 
 .code-inline {
