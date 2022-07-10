@@ -23,7 +23,7 @@ const convertExcelTimeToTimestamp = (dataValue) => {
 }
 ```
 
-The function subtracts the number of days between the start of 1900 and 1970 from the input, to get the date in +/- days relative to 01/01/1970. Multiplying this by the number of milliseconds in a day gets a Unix time value that's usable in JavaScript. To figure out the value of `DAYS_OFFSET` I initially used an online date difference calculator to get the rough value and then relied on a unit test to check it's correct. I took the first 1900 date serial number from the Belgian Excel spreadsheet, 43891, and made a test asserting that the function returned the date shown in Excel, “2020-03-01”. Cool, test passes, done.
+The function subtracts the number of days between the start of 1900 and 1970 from the input, to get the date in +/- days relative to 01/01/1970. Multiplying this by the number of milliseconds in a day gets a Unix time value that's usable in JavaScript. To figure out the value of <span class= "code-inline">DAYS_OFFSET</span> I initially used an online date difference calculator to get the rough value and then relied on a unit test to check it's correct. I took the first 1900 date serial number from the Belgian Excel spreadsheet, 43891, and made a test asserting that the function returned the date shown in Excel, “2020-03-01”. Cool, test passes, done.
 
 But then I ended up in a confusing loop when I began adding more unit tests.
 
@@ -34,6 +34,6 @@ Expected: “1900-01-01”
 Received: “1899-12-31”
 ```
 
-Turns out my error was trusting Excel. For historical reasons, Excel has to support a bug where 1900 is falsely believed to be a leap year. This means that Excel believes there's an extra day between 01/01/1900 and 01/01/1970, impacting the value of `DAYS_OFFSET` in my function. It works fine for recent dates, but if I use the function for dates before the fictional leap day 29/02/1900 then the offset value is incorrect and I get an out by one error.
+Turns out my error was trusting Excel. For historical reasons, Excel has to support a bug where 1900 is falsely believed to be a leap year. This means that Excel believes there's an extra day between 01/01/1900 and 01/01/1970, impacting the value of <span class= "code-inline">DAYS_OFFSET</span> in my function. It works fine for recent dates, but if I use the function for dates before the fictional leap day 29/02/1900 then the offset value is incorrect and I get an out by one error.
 
 The moral of the story - think about whether your unit tests cover scenarios or edge cases that _will_ occur in your app, and don't add unneeded unit tests. The project I'm working on was never going to receive dates from the early 1900s and if I hadn't begun adding unnecessary tests I wouldn't have stumbled on this confusing error and spent 30 minutes questioning the space-time continuum.

@@ -214,9 +214,14 @@
 }
 
 code {
+    font-size: inherit;
     padding: 1rem;
     display: block;
     overflow-y: scroll;
+    
+    & span {
+        font-size: inherit;
+    }
 }
 
 .code-inline {
