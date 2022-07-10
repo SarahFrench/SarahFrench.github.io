@@ -352,6 +352,14 @@ code {
 .blog-post img {
   width: 100%; }
 
+.blog-post p a:link, .blog-post p a:visited, .blog-post p a:active {
+  text-decoration: none;
+  color: var(--purple); }
+
+.blog-post p a:hover {
+  text-decoration: none;
+  color: var(--yellow); }
+
 .blog-preview__container {
   margin-bottom: 2rem; }
 
@@ -361,15 +369,12 @@ code {
   color: var(--white);
   text-decoration: none;
   width: fit-content; }
-  .blog-preview__title:link {
-    text-decoration: none; }
-  .blog-preview__title:visited {
-    text-decoration: none; }
-  .blog-preview__title:hover {
+  .blog-preview__title a:link, .blog-preview__title a:visited, .blog-preview__title a:active {
+    text-decoration: none;
+    color: var(--purple); }
+  .blog-preview__titlea:hover {
     text-decoration: none;
     color: var(--yellow); }
-  .blog-preview__title:active {
-    text-decoration: none; }
 
 .blog-preview__subtitle {
   margin-block-start: 0.5rem;
@@ -378,6 +383,12 @@ code {
 
 .blog-preview__snippet {
   color: var(--pink); }
+  .blog-preview__snippet a:link, .blog-preview__snippet a:visited, .blog-preview__snippet a:active {
+    text-decoration: none;
+    color: var(--purple); }
+  .blog-preview__snippeta:hover {
+    text-decoration: none;
+    color: var(--yellow); }
 
 :root {
   --white: rgb(255, 255, 255);
@@ -435,15 +446,12 @@ code {
   color: var(--white);
   text-decoration: none;
   width: fit-content; }
-  .project-preview__title:link {
-    text-decoration: none; }
-  .project-preview__title:visited {
-    text-decoration: none; }
-  .project-preview__title:hover {
+  .project-preview__title a:link, .project-preview__title a:visited, .project-preview__title a:active {
+    text-decoration: none;
+    color: var(--purple); }
+  .project-preview__titlea:hover {
     text-decoration: none;
     color: var(--yellow); }
-  .project-preview__title:active {
-    text-decoration: none; }
 
 .project-preview__subtitle {
   margin-block-start: 0.5rem;
@@ -475,8 +483,8 @@ code {
 .project-page img {
   width: 100%; }
 
-.project-page a:not(.tag-list__item) {
-  color: inherit; }
+.project-page p a {
+  color: var(--purple); }
 
 .project__hero-image {
   width: 100%;

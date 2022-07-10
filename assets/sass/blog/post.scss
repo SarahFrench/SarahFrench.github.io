@@ -28,3 +28,17 @@
 .blog-post img {
     width: 100%;
 }
+
+.blog-post p a {
+    &:link,
+    &:visited,
+    &:active {
+        text-decoration: none;
+        color: var(--purple);
+    }
+    
+    &:hover {
+        text-decoration: none;
+        color: var(--yellow);
+    }
+}

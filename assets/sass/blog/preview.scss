@@ -9,18 +9,16 @@
     text-decoration: none;
     width: fit-content;
 
-    &:link{
+    & a:link,
+    & a:visited,
+    & a:active {
         text-decoration: none;
+        color: var(--purple);
     }
-    &:visited{
-        text-decoration: none;
-    }
-    &:hover{
+
+    &a:hover {
         text-decoration: none;
         color: var(--yellow);
-    }
-    &:active{
-        text-decoration: none;
     }
 }
 
@@ -32,4 +30,16 @@
 
 .blog-preview__snippet{
     color: var(--pink);
+    
+    & a:link,
+    & a:visited,
+    & a:active {
+        text-decoration: none;
+        color: var(--purple);
+    }
+
+    &a:hover {
+        text-decoration: none;
+        color: var(--yellow);
+    }
 }

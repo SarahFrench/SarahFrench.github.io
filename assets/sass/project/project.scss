@@ -33,6 +33,6 @@
     width: 100%;
 }
 
-.project-page a:not(.tag-list__item) {
-    color: inherit;
+.project-page p a {
+    color: var(--purple);
 }
