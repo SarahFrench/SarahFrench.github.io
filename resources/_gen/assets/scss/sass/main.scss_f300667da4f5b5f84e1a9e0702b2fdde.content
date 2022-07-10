@@ -218,6 +218,10 @@ code {
   overflow-y: scroll; }
   code span {
     font-size: inherit; }
+  code span span {
+    font-size: inherit; }
+  code span span span {
+    font-size: inherit; }
 
 .code-inline {
   font-family: monospace;

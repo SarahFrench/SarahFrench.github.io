@@ -222,6 +222,12 @@ code {
     & span {
         font-size: inherit;
     }
+    & span span {
+        font-size: inherit;
+    }
+    & span span span {
+        font-size: inherit;
+    }
 }
 
 .code-inline {
