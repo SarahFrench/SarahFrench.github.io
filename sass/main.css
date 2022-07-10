@@ -215,13 +215,8 @@ code {
   font-size: inherit;
   padding: 1rem;
   display: block;
-  overflow-y: scroll; }
-  code span {
-    font-size: inherit; }
-  code span span {
-    font-size: inherit; }
-  code span span span {
-    font-size: inherit; }
+  overflow-y: scroll;
+  -webkit-text-size-adjust: none; }
 
 .code-inline {
   font-family: monospace;
