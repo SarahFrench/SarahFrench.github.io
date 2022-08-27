@@ -213,16 +213,18 @@
     width: 100%;
 }
 
-code {
-    font-size: inherit;
+// Padding around code blocks made with triple backticks
+div.highlight pre {
     padding: 1rem;
-    display: block;
-    overflow-y: scroll;
-    
-    -webkit-text-size-adjust: none;
+    overflow-x: scroll;
 }
 
-.code-inline {
+// Remember that directly styling code tags affects inline code with single backticks too
+div.highlight code {
     font-family: monospace;
     color: inherit;
+    font-size: inherit;
+    display: inline;
+
+    -webkit-text-size-adjust: none;
 }

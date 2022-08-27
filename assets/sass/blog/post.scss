@@ -29,7 +29,21 @@
     width: 100%;
 }
 
-.blog-post p a {
+.blog-post figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    & figcaption {
+        text-align: center;
+        font-size: 90%;
+        font-style: italic;
+    }
+}
+
+.blog-post p a,
+.blog-post li a {
     &:link,
     &:visited,
     &:active {
