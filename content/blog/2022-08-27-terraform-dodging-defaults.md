@@ -18,14 +18,16 @@ tags: [
 - [Using multiple versions of the same provider](#how-do-i-use-different-versions-of-the-same-provider"") (spoiler: you can't)
 - [Extra: configuring one provider binary multiple ways](#extra-how-do-i-configure-a-single-provider-to-be-used-in-different-ways)
 - [Downloading providers from places other than the public Registry](#how-do-i-get-providers-from-a-source-other-than-the-public-registry)
+- [Gist with example configs matching this article](https://gist.github.com/SarahFrench/2d0ab79d1c6eee179b0fafd952bb4289)
+- [Conclusion & list of keywords](#conclusion)
 
 # Intro
 
 I've used Terraform regularly for a while now and decided to consolidate my knowledge by studying for the [Terraform Associate Certification](https://www.hashicorp.com/certification/terraform-associate). I hoped this would identify gaps in my knowledge, as I've found that feeling like you've learned 'enough' is an easy trap to fall into when learning a new technology. You get comfortable with your incomplete-but-sufficient mental models of how things work and don't know what you don't know, until you encounter a bug that makes zero sense to you. Or you never realise there's a gap and you totally miss out on features!
 
-During my process of finding my blind spots I realised that Terraform has a lot of default behaviours that 'just work' in the background. And that's great, but it also means there are whole aspects of the product that people may not fully got to grips with. For me, these knowledge gaps were around how providers are selected for download and use in a project; previous projects I worked on didn't have changing provider requirements, and the few changes that happened were handled by senior engineers behind closed doors. So, consider this post my version of a crash course on provider requirements.
+During my process of finding my blind spots I realised that Terraform has a lot of default behaviours that 'just work' in the background. And that's great, but it also means there are whole aspects of the product that people may not fully got to grips with. For me, these knowledge gaps were around how providers are selected for download and use in a project; previous projects I worked on didn't have changing provider requirements, and the few changes that happened were handled by senior engineers behind closed doors. So, consider this article my version of a crash course on provider requirements.
 
-The target reader of this post is someone who knows enough Terraform "to be dangerous" but hasn't explored all the features yet. I hope this post will surface ideas that less experienced practitioners haven't encountered fully and also supplement the documentation by describing an end goal and how you achieve it, versus me simply rehashing the official documentation. I link to the docs throughout the post and I encourage you to take a look!
+The target reader of this article is someone who knows enough Terraform "to be dangerous" but hasn't explored all the features yet. I hope this article will surface ideas that less experienced practitioners haven't encountered fully and also supplement the documentation by describing an end goal and how you achieve it, versus me simply rehashing the official documentation. Also, I link to the docs throughout and I encourage you to take a look!
 
 
 <figure>
@@ -251,7 +253,7 @@ You would think that this is handled in a similar way to the scenario above, but
 
 ## Extra: How do I configure a single provider to be used in different ways?
 
-(This is 'extra' as it goes into how we use providers after they're downloaded, versus the rest of the post describing how to change provider installation behaviour)
+(This is 'extra' as it goes into how we use providers after they're downloaded, versus the rest of the article describing how to change provider installation behaviour)
 
 When we define a list of providers in `required_providers` we are telling Terraform what binary files to download, from where and at what version. However, those provider binary may be configurable and allow Terraform to use the same provider to provision resources in different ways. Below is an example of configuring the google provider, taken from [the documentation](https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference):
 
@@ -295,7 +297,7 @@ resource "google_storage_bucket" "bucket-made-with-provider-alias" {
 }
 ```
 
-It's important to think about your provider aliases as it can impact how providers are made accessible to modules. This is beyond the scope of this post, but for extra reading you can see how [implicit provider inheritance](https://www.terraform.io/language/modules/develop/providers#implicit-provider-inheritance) automatically makes all your default provider configurations available to child modules in your project. This is another default behaviour you might want to prevent by [explicitly passing in providers instead](https://www.terraform.io/language/modules/develop/providers#passing-providers-explicitly).
+It's important to think about your provider aliases as it can impact how providers are made accessible to modules. This is beyond the scope of this article, but for extra reading you can see how [implicit provider inheritance](https://www.terraform.io/language/modules/develop/providers#implicit-provider-inheritance) automatically makes all your default provider configurations available to child modules in your project. This is another default behaviour you might want to prevent by [explicitly passing in providers instead](https://www.terraform.io/language/modules/develop/providers#passing-providers-explicitly).
 
 And finally, remember: aliases and local names are _separate_ but related concepts.
 
@@ -303,7 +305,7 @@ Ok, one last section to go!
 
 ## How do I get providers from a source other than the public Registry?
 
-Of all the default behaviours I described at the start of this post, the only default behaviour we haven't addressed yet is where Terraform actually downloads providers from.
+Of all the default behaviours I listed previously, the only default behaviour we haven't addressed yet is where Terraform actually downloads providers from.
 
 Terraform defaults to using the public Registry, but **private Registries** are also an option. This may be required if a company has created a provider to help manage resources using their private, internal APIs and they don't want details of their internal systems to be publically accessible.
 
@@ -342,7 +344,7 @@ As the private Registry is private you would then need to configure the Terrafor
 
 ### Other options besides public/private Registries
 
-There are other options besides Registries, but doing a deep dive into how they're configured is beyond the scope of this post. I'll summarise them quickly with links to documentation.
+There are other options besides Registries, but doing a deep dive into how they're configured is beyond the scope of this article. I'll summarise them quickly with links to documentation.
 
 Both these options require configuration of the Terraform CLI itself, instead of explicit changes in the configuration files in your working directory. You set up your `required_providers` list in the same way as before.
 
@@ -350,32 +352,39 @@ Both these options require configuration of the Terraform CLI itself, instead of
 
 [**Filesystem mirrors**](https://www.terraform.io/cli/config/config-file#filesystem_mirror) : these allow Terraform to get providers from a location on the local disk, and is useful if you run Terraform in a private cloud environment where access to the public internet is restricted. Version selection and using checksums is supported here.
 
+# Gist: Full configs matching this article
+
+✨ [Here's a gist with example configs matching this article](https://gist.github.com/SarahFrench/2d0ab79d1c6eee179b0fafd952bb4289)
+
 ## Conclusion
 
 <figure>
 <iframe src="https://giphy.com/embed/McHNcxIszjVStqZZ8s" width="100%" height="auto" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/foofighters-foo-fighters-studio-666-McHNcxIszjVStqZZ8s"></a></p>
 <figcaption>
-That's enough for one post!
+That's enough for one article!
 </figcaption>
 </figure>
 
-I hope it has helped your understanding of Terraform and/or exposed you to keywords that weren't familiar to you before. All the contents of this post come from the Terraform documentation but I aim to have presented that information in a different way to try and help bring together concepts that are spread across different sections in the docs.
+I hope this article has helped your understanding of Terraform, or exposed you to keywords that weren't familiar to you before. By seeing the progression of a Terraform configuration from minimal to more explicit (or complex) you should be able to 
+identify what default behaviours your own Terraform projects are using.
 
-The post is jargon-heavy, so here's a summary of keywords and concepts in this post:
+A lot of the things covered here may not be immediately relevant to any projects you're working on but should help you make sense of any unexpected errors arising from default behaviours! For instance if you had a Terraform configuration that used only [the `google-beta` provider](https://registry.terraform.io/providers/hashicorp/google-beta/latest) and you added a `google_` resource without a `provider` meta-argument you'd get an error saying "Required plugins are not installed". You might then remember that there's a default behaviour to look for providers with the preferred local name, and that's why Terraform wants you to install the `google` provider instead of using the `google-beta` provider like you intended. 
 
-- version contraints
-- (registry) source address
+The article is jargon-heavy, so here's a summary of keywords and concepts we covered:
+
+- version contraints : [docs 1](https://www.terraform.io/language/expressions/version-constraints), [docs 2](https://www.terraform.io/language/providers/requirements#version-constraints)
+- (registry) source address : [docs 1](https://www.terraform.io/language/providers/requirements#source-addresses), [docs 2](https://www.terraform.io/language/modules/sources#terraform-registry)
 - hostname
 - namespace
 - provider
 - fully-qualified source address = `<HOSTNAME>/<NAMESPACE>/<PROVIDER>`
-- local name
+- [local name](https://www.terraform.io/language/providers/requirements#local-names)
 - preferred local name
-- default provider configuration
-- alias
+- [default provider configuration](https://www.terraform.io/language/providers/configuration#default-provider-configurations)
+- [alias](https://www.terraform.io/language/providers/configuration#alias-multiple-provider-configurations)
 
 
-And here are concepts touched on but not explored fully in the post:
+And here are the concepts we touched on but not explored fully in the article:
 
 - [implicit provider inheritance by modules](https://www.terraform.io/language/modules/develop/providers#implicit-provider-inheritance)
 - [explicit passing of providers to modules](https://www.terraform.io/language/modules/develop/providers#passing-providers-explicitly)
@@ -383,4 +392,3 @@ And here are concepts touched on but not explored fully in the post:
 - [Provider Network Mirror Protocol](https://www.terraform.io/internals/provider-network-mirror-protocol)
 - [Network mirrors](https://www.terraform.io/cli/config/config-file#network_mirror)
 - [Filesystem mirrors](https://www.terraform.io/cli/config/config-file#filesystem_mirror)
-- [Developer overrides](https://www.terraform.io/cli/config/config-file#development-overrides-for-provider-developers)
