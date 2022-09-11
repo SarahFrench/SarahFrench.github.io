@@ -1,10 +1,11 @@
 ---
 title: "Using Terraform Providers: Dodging Default Behaviour"
-date: 2022-08-27T00:00:00.000Z
+date: 2022-09-11T20:00:00.000Z
 draft: false
 tags: [
     "Terraform",
     "Certifications",
+    "Deep-Dive",
 ]
 ---
 
