@@ -15,12 +15,15 @@
     // Shouldn't be used though!
     font-size: 2.5rem;
 }
+
 .blog-post h2 {
     font-size: 2.5rem;
 }
+
 .blog-post h3 {
     font-size: 2rem;
 }
+
 .blog-post h4 {
     font-size: 1.75rem;
 }
@@ -44,13 +47,14 @@
 
 .blog-post p a,
 .blog-post li a {
+
     &:link,
     &:visited,
     &:active {
         text-decoration: none;
         color: var(--purple);
     }
-    
+
     &:hover {
         text-decoration: none;
         color: var(--yellow);

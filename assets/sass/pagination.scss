@@ -36,15 +36,16 @@
         background-color: var(--blue-black);
         border: 1px solid var(--pink);
         cursor: default;
+
         & a {
             color: var(--pink);
         }
     }
-    
-    &:not(active){
+
+    &:not(active) {
         cursor: pointer;
         border: 1px solid var(--pink);
-        
+
         & a {
             color: var(--pink);
         }
