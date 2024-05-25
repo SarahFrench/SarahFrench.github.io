@@ -6,9 +6,10 @@
 @import 'project/main';
 @import 'pagination';
 
-body, html{
-    margin:0;
-    padding:0;
+body,
+html {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     background-color: var(--blue-black);
     font-family: Arial, Helvetica, sans-serif;
@@ -19,7 +20,7 @@ p::selection {
     color: var(--blue-black);
 }
 
-.social-icon{
+.social-icon {
     height: 80%;
     width: auto;
     fill: var(--grey);

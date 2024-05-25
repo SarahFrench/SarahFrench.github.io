@@ -4,7 +4,7 @@
     --stylised-font: 'VT323';
 }
 
-.hero{
+.hero {
     z-index: -1;
 }
 
@@ -57,6 +57,7 @@
     .nav {
         justify-content: flex-end;
     }
+
     .nav-link {
         margin-right: 3rem;
         font-size: 3rem;
@@ -72,15 +73,19 @@
     box-sizing: inherit;
 
     // Design
-    box-shadow: 0px 0px 5px 5px var(--pink);
+    border-image: linear-gradient(to bottom, var(--pink), var(--blue-black)) 1;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--pink); // Fallback if border-image doesn't work
     background-color: var(--blue-black);
 
     // Top position depends on the hero image shown (home vs. not-home)
     &--home {
         top: calc(-30vw + 100px); // YOLO calc works across devices
     }
+
     &--subpage {
-        top: calc(-10vw + 50px); 
+        top: calc(-10vw + 50px);
     }
 }
 
@@ -88,7 +93,7 @@
     .main-wrapper {
         // Positioning and margin
         left: 15vw;
-        width: 70vw;  // 100 - 2*15
+        width: 70vw; // 100 - 2*15
         margin-bottom: 3rem;
     }
 }
@@ -103,7 +108,7 @@
     min-height: 75vh;
     box-sizing: inherit;
 
-    
+
 }
 
 @media (min-width: $breakpoint-tablet) {
@@ -118,7 +123,7 @@
 
     // Position and dimensions
     width: 100%;
-    
+
     &__text {
         // Text formatting and colour
         padding-right: 1rem;
@@ -167,15 +172,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+
     &--left {
         //Default to top
         order: 1;
     }
+
     &--right {
         //Default to bottom
         order: 2;
     }
+
     &--image {
         padding: 0;
 
@@ -196,7 +203,7 @@
 }
 
 @media (min-width: $breakpoint-tablet) {
-    .container{
+    .container {
         flex-direction: row;
     }
 

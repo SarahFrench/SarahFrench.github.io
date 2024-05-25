@@ -33,6 +33,7 @@ path {
         filter: drop-shadow(0px 0px 10px var(--yellow));
         fill: var(--yellow);
     }
+
     path {
         stroke: var(--purple);
     }
@@ -62,16 +63,26 @@ path {
 }
 
 .cloud-scroll-rev {
-  -webkit-animation: cloud-scroll-rev 60s infinite linear;
-  animation: cloud-scroll-rev 60s infinite linear;
+    -webkit-animation: cloud-scroll-rev 60s infinite linear;
+    animation: cloud-scroll-rev 60s infinite linear;
 }
 
 @keyframes cloud-scroll {
-    0%  {-webkit-transform: translateX(-10vw);}
-    100% {-webkit-transform: translateX(10vw);}
+    0% {
+        -webkit-transform: translateX(-10vw);
+    }
+
+    100% {
+        -webkit-transform: translateX(10vw);
+    }
 }
 
 @keyframes cloud-scroll-rev {
-    0% {-webkit-transform: translateX(10vw);}
-    100%  {-webkit-transform: translateX(-10vw);}
+    0% {
+        -webkit-transform: translateX(10vw);
+    }
+
+    100% {
+        -webkit-transform: translateX(-10vw);
+    }
 }

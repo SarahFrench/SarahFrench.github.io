@@ -1,16 +1,31 @@
 {{ define "main" }}
+<ignore-format>
     {{ partial "list-page-title" . }}
-    <!-- {{ partial "site-tag-list" . }} -->
+</ignore-format>
+<!-- {{ partial "site-tag-list" . }} -->
 
+<ignore-format>
     {{ $paginator := .Paginate (where .Pages "Type" "blog") 10 }}
-    {{ range $paginator.Pages.ByDate.Reverse }}
-        {{ $blogPost := . }}
-        {{ partial "blog/preview" $blogPost }}
+    {{ if not (eq $paginator.TotalPages 0) }}
+    <ignore-format>
+        <!-- Range over paginator if length != 0 -->
+        {{ range $paginator.Pages.ByDate.Reverse }}
+        <ignore-format>
+            {{ $blogPost := . }}
+            {{ partial "blog/preview" $blogPost }}
+            {{ end }}
+        </ignore-format>
+    </ignore-format>
+    {{ else }}
+    <p>Nothing to see here!</p>
     {{ end }}
     <!-- Internal pagination template in Hugo -->
     {{ template "_internal/pagination.html" . }}
+</ignore-format>
 {{ end }}
 
 {{ define "hero" }}
+<ignore-format>
     {{ partial "hero/pink-lines.svg" }}
+</ignore-format>
 {{ end }}

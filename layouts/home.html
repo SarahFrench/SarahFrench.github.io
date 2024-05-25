@@ -25,7 +25,9 @@
             {{.Params.Introduction.Heading}}
         </h1>
         {{range .Params.Introduction.Paragraphs}}
+        <ignore-format>
             <p>{{.}}</p>
+        </ignore-format>
         {{end}}
     </div>
 </section>
