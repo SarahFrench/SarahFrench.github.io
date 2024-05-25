@@ -73,7 +73,10 @@
     box-sizing: inherit;
 
     // Design
-    box-shadow: 0px 0px 5px 5px var(--pink);
+    border-image: linear-gradient(to bottom, var(--pink), var(--blue-black)) 1;
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--pink); // Fallback if border-image doesn't work
     background-color: var(--blue-black);
 
     // Top position depends on the hero image shown (home vs. not-home)
