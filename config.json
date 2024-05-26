@@ -2,11 +2,27 @@
     "baseURL": "https://sarahfrench.dev",
     "languageCode": "en-uk",
     "title": "Sarah French",
-    "sectionPagesMenu": "main",
     "taxonomies": {
         "tag": "tags"
     },
     "menu": {
+        "main": [
+            {
+                "name": "Home",
+                "url": "/",
+                "weight": "10"
+            },
+            {
+                "name": "Blog",
+                "url": "/blog",
+                "weight": "20"
+            },
+            {
+                "name": "Projects",
+                "url": "/project",
+                "weight": "30"
+            }
+        ],
         "social": [
             {
                 "identifier": "linkedin",
