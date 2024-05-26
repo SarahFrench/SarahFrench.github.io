@@ -2,7 +2,6 @@
 <ignore-format>
     {{ partial "list-page-title" . }}
 </ignore-format>
-<!-- {{ partial "site-tag-list" . }} -->
 
 <ignore-format>
     {{ $paginator := .Paginate (where .Pages "Type" "blog") 10 }}
