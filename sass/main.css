@@ -126,7 +126,10 @@ path {
   width: 94vw;
   margin-bottom: 2rem;
   box-sizing: inherit;
-  box-shadow: 0px 0px 5px 5px var(--pink);
+  border-image: linear-gradient(to bottom, var(--pink), var(--blue-black)) 1;
+  border-width: 5px;
+  border-style: solid;
+  border-color: var(--pink);
   background-color: var(--blue-black); }
   .main-wrapper--home {
     top: calc(-30vw + 100px); }
@@ -542,7 +545,8 @@ div.highlight code {
     .page-item:not(active) a {
       color: var(--pink); }
 
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
