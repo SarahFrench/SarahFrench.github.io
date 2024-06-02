@@ -1,8 +1,4 @@
 ---
-title: "Home"
-menu:
-  main:
-    weight: 100
 introduction:
   heading: "Hi I'm Sarah"
   paragraphs: [
