@@ -7,6 +7,8 @@ tags: [
     "Certifications",
     "Deep-Dive",
 ]
+params:
+    summary: The one where I try to make the implicit stuff about Terraform more explicit
 ---
 
 # Contents
