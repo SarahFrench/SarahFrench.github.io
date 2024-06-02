@@ -354,18 +354,22 @@ div.highlight code {
 .blog-post h4 {
   font-size: 1.75rem; }
 
-.blog-post img {
-  width: 100%; }
-
 .blog-post figure {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  margin: 0;
+  margin-top: 2rem;
   margin-bottom: 2rem; }
+  .blog-post figure img {
+    width: 100%;
+    margin-bottom: 1rem; }
   .blog-post figure figcaption {
     text-align: center;
     font-size: 90%;
-    font-style: italic; }
+    font-style: italic;
+    width: 100%; }
 
 .blog-post p a:link, .blog-post p a:visited, .blog-post p a:active,
 .blog-post li a:link,
@@ -378,6 +382,14 @@ div.highlight code {
 .blog-post li a:hover {
   text-decoration: none;
   color: var(--yellow); }
+
+@media (min-width: 768px) {
+  .blog-post figure img {
+    width: 50%; } }
+
+@media (min-width: 768px) {
+  .blog-post figure figcaption {
+    width: 60%; } }
 
 .blog-preview__container {
   margin-bottom: 2rem; }
