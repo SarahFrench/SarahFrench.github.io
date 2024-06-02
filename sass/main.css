@@ -412,12 +412,12 @@ div.highlight code {
   margin-block-end: 0.5rem;
   color: var(--purple); }
 
-.blog-preview__snippet {
+.blog-preview__summary {
   color: var(--pink); }
-  .blog-preview__snippet a:link, .blog-preview__snippet a:visited, .blog-preview__snippet a:active {
+  .blog-preview__summary a:link, .blog-preview__summary a:visited, .blog-preview__summary a:active {
     text-decoration: none;
     color: var(--purple); }
-  .blog-preview__snippeta:hover {
+  .blog-preview__summarya:hover {
     text-decoration: none;
     color: var(--yellow); }
 
