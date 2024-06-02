@@ -5,6 +5,8 @@ draft: false
 tags: [
     "Cringe",
 ]
+params:
+    summary: The one where I was in a pandemic
 ---
 ## Hello!
 

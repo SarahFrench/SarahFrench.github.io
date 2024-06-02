@@ -5,6 +5,8 @@ draft: false
 tags: [
     "Bugs",
 ]
+params:
+    summary: The one where I stumbled on a bug in Excel
 ---
 
 Dates and times always have the potential to cause trouble in code; back in my apprenticeship, my teacher drove this point home by sharing a great article called <a href="https://infiniteundo.com/post/25326999628/falsehoods-programmers-believe-about-time" rel="noopener noreferrer nofollow" target="_blank">Falsehoods programmers believe about time</a>. Since then I've been wary of working with data that relies heavily on dates. (If you cannot tell, this paragraph's job is to supply foreshadowing).

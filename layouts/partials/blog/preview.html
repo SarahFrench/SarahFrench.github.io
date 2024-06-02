@@ -3,7 +3,9 @@
         <h2 class="blog-preview__title">{{.Title}}</h2>
     </a>
     <p class="blog-preview__subtitle">{{ .Date | time.Format ":date_long" }}</p>
-    <section class="blog-preview__snippet">
-        {{ .Content | truncate 250 }}
+    {{ if .Param "summary" }}
+    <section class="blog-preview__summary">
+        {{ .Params.summary }}
     </section>
+    {{ end }}
 </article>
