@@ -151,7 +151,7 @@ path {
 
 @media (min-width: 768px) {
   .main-content {
-    padding: 3rem 2rem 5rem 2rem;
+    padding: 3rem 8rem 5rem 8rem;
     min-height: 50vh; } }
 
 .footer {
