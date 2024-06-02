@@ -28,21 +28,28 @@
     font-size: 1.75rem;
 }
 
-.blog-post img {
-    width: 100%;
-}
-
 .blog-post figure {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 2rem;
     margin-bottom: 2rem;
+
+    & img {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 
     & figcaption {
         text-align: center;
         font-size: 90%;
         font-style: italic;
+        width: 100%;
     }
+
+
 }
 
 .blog-post p a,
@@ -58,5 +65,17 @@
     &:hover {
         text-decoration: none;
         color: var(--yellow);
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .blog-post figure img {
+        width: 50%;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .blog-post figure figcaption {
+        width: 60%;
     }
 }
