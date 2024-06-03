@@ -1,8 +1,8 @@
-.blog-preview__container {
+.post-preview__container {
     margin-bottom: 2rem;
 }
 
-.blog-preview__title {
+.post-preview__title {
     font-size: 3rem;
     margin-block-end: 0.5rem;
     color: var(--white);
@@ -22,13 +22,13 @@
     }
 }
 
-.blog-preview__subtitle {
+.post-preview__subtitle {
     margin-block-start: 0.5rem;
     margin-block-end: 0.5rem;
     color: var(--purple);
 }
 
-.blog-preview__summary {
+.post-preview__snippet {
     color: var(--pink);
 
     & a:link,

@@ -3,9 +3,4 @@
         <h2 class="post-preview__title">{{.Title}}</h2>
     </a>
     <p class="post-preview__subtitle">{{ .Date | time.Format ":date_long" }}</p>
-    {{ if .Param "summary" }}
-    <section class="post-preview__summary">
-        {{ .Params.summary }}
-    </section>
-    {{ end }}
 </article>

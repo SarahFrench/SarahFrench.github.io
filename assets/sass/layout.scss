@@ -25,6 +25,11 @@
     }
 }
 
+.sub-title__container p {
+    text-align: center;
+    color: var(--purple);
+}
+
 .nav {
     // Stickiness
     z-index: 1;
