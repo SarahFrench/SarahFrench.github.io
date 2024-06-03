@@ -399,7 +399,7 @@ div.highlight code {
   margin-bottom: 2rem; }
 
 .post-preview__title {
-  font-size: 3rem;
+  font-size: 1.5rem;
   margin-block-end: 0.5rem;
   color: var(--white);
   text-decoration: none;
@@ -424,6 +424,10 @@ div.highlight code {
   .post-preview__summarya:hover {
     text-decoration: none;
     color: var(--yellow); }
+
+@media (min-width: 768px) {
+  .post-preview__title {
+    font-size: 3rem; } }
 
 :root {
   --white: rgb(255, 255, 255);
@@ -476,7 +480,7 @@ div.highlight code {
   margin-bottom: 2rem; }
 
 .project-preview__title {
-  font-size: 3rem;
+  font-size: 1.5rem;
   margin-block-end: 0.5rem;
   color: var(--white);
   text-decoration: none;
@@ -492,6 +496,10 @@ div.highlight code {
   margin-block-start: 0.5rem;
   margin-block-end: 0.5rem;
   color: var(--purple); }
+
+@media (min-width: 768px) {
+  .project-preview__title {
+    font-size: 3rem; } }
 
 .project-page__caption {
   text-align: center;
