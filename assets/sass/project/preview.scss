@@ -3,7 +3,7 @@
 }
 
 .project-preview__title {
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin-block-end: 0.5rem;
     color: var(--white);
     text-decoration: none;
@@ -26,4 +26,10 @@
     margin-block-start: 0.5rem;
     margin-block-end: 0.5rem;
     color: var(--purple);
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .project-preview__title {
+        font-size: 3rem;
+    }
 }

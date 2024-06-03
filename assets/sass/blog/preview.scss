@@ -3,7 +3,7 @@
 }
 
 .post-preview__title {
-    font-size: 3rem;
+    font-size: 1.5rem;
     margin-block-end: 0.5rem;
     color: var(--white);
     text-decoration: none;
@@ -41,5 +41,11 @@
     &a:hover {
         text-decoration: none;
         color: var(--yellow);
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .post-preview__title {
+        font-size: 3rem;
     }
 }
