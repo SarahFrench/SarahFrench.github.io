@@ -18,9 +18,14 @@
                 "weight": "20"
             },
             {
+                "name": "Memos",
+                "url": "/memo",
+                "weight": "30"
+            },
+            {
                 "name": "Projects",
                 "url": "/project",
-                "weight": "30"
+                "weight": "40"
             }
         ],
         "social": [
