@@ -6,6 +6,8 @@ tags: [
     "Terraform",
     "How-To"
 ]
+params:
+    summary: The one where we DELVE into the world of debugging providers in VS Code
 ---
 
 My first experience of 'debugging' was using good old `console.log` in JavaScript when I was first learning about programming. Since then I've learned that print statements and logs only get you so far, and _proper_ debugging is so much more useful. When I first started contributing to Terraform provider projects I wasn't shown how to use debuggers with providers and the resources I found online were a bit fragmented. So, this blog is a way for me to share what I learned and hopefully help others (or just be a reference for myself in the future!).
