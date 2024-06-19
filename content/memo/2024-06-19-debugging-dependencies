@@ -11,7 +11,7 @@ If you want to debug how a dependency is used in a Go project run `go mod vendor
 
 ## Replacing dependencies with your forks
 
-If you're working on a contribution to a dependency (for example fixing a bug you've discovered) then you might want to test that out locally with your project. To do this you can use the `replace` keyword in your go.mod file. Here I've replaced use of `hashicorp/terraform-plugin-sdk` with my fork, specifically a commit containing an idea for a contribution/bug fix ([d188bcc](https://github.com/SarahFrench/terraform-plugin-sdk/commit/d188bcc3c75e66bd775b98fc512a5706ccf930e8)).
+If you're working on a contribution to a dependency (for example fixing a bug you've discovered) then you might want to test that out locally with your project. To do this you can use the `replace` keyword in your go.mod file. Here I've replaced use of `hashicorp/terraform-plugin-sdk` with my fork, specifically a commit containing an idea for a contribution/bug fix (<a href="https://github.com/SarahFrench/terraform-plugin-sdk/commit/d188bcc3c75e66bd775b98fc512a5706ccf930e8" rel="noopener noreferrer nofollow" target="_blank">d188bcc</a>).
 
 ```
 module github.com/hashicorp/terraform-provider-google-beta
@@ -39,4 +39,4 @@ After a quick `go mod tidy` this is changed to a valid reference, which in my ca
 
 After adding `replace` to your go.mod file you can run `go mod vendor` again. In the vendor folder the directory structure will use the replaced dependency's name (vendor/github.com/hashicorp/terraform-plugin-sdk/... in my case) but the actual code inside will be the contents of your fork!
 
-Using these steps I was able to find my contribution's regex needed to be [updated to account for a suffix present on sweeper names](https://github.com/SarahFrench/terraform-plugin-sdk/commit/8de2d85fb5cb52931e835c9bfe848737a492ecf0), which is used internally by the SDK code.
+Using these steps I was able to find my contribution's regex needed to be <a href="https://github.com/SarahFrench/terraform-plugin-sdk/commit/8de2d85fb5cb52931e835c9bfe848737a492ecf0" rel="noopener noreferrer nofollow" target="_blank">updated to account for a suffix present on sweeper names</a>, which is used internally by the SDK code.
