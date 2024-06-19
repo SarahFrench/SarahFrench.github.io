@@ -11,7 +11,9 @@ If you want to debug how a dependency is used in a Go project run `go mod vendor
 
 ## Replacing dependencies with your forks
 
-If you're working on a contribution to a dependency (for example fixing a bug you've discovered) then you might want to test that out locally with your project. To do this you can use the `replace` keyword in your go.mod file. Here I've replaced use of `hashicorp/terraform-plugin-sdk` with my fork, specifically a commit containing an idea for a contribution/bug fix (<a href="https://github.com/SarahFrench/terraform-plugin-sdk/commit/d188bcc3c75e66bd775b98fc512a5706ccf930e8" rel="noopener noreferrer nofollow" target="_blank">d188bcc</a>).
+If you're working on a contribution to a dependency (for example fixing a bug you've discovered) then you might want to test that out locally with your project. To do this you can use the `replace` keyword in your go.mod file.
+
+Today I wanted to test a change to how sweepers are filtered in the hashicorp/terraform-plugin-sdk module, as part of my work on the Google Terraform provider. The snippet below shows how I replaced use of `hashicorp/terraform-plugin-sdk` with my fork of that module containing a change. In the go,mod file I specify a commit containing an idea for a contribution/bug fix (<a href="https://github.com/SarahFrench/terraform-plugin-sdk/commit/d188bcc3c75e66bd775b98fc512a5706ccf930e8" rel="noopener noreferrer nofollow" target="_blank">d188bcc</a>). That commit SHA is used below:
 
 ```
 module github.com/hashicorp/terraform-provider-google-beta
