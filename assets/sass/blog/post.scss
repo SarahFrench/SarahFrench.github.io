@@ -68,6 +68,13 @@
     }
 }
 
+.post .notice {
+    border-color: var(--pink);
+    border-style: dashed;
+    border-width: 2px;
+    padding: 2rem;
+}
+
 @media (min-width: $breakpoint-tablet) {
     .post figure img {
         width: 50%;

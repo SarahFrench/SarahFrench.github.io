@@ -13,6 +13,8 @@ image: "image/advent-calendar.png"
 
 ---
 
+<p class="notice"><em>Note</em>: With the end of Heroku's Free Tier came the end of this project :'( , however I've copied some of the static pages over to <a href="https://sarahfrench.dev/silly-pages/">https://sarahfrench.dev/silly-pages</a></p>
+
 ## What on Earth...
 
 This, my friends, was the first 'big' project I started and completed as a junior developer. It's a advent calendar for 2019 which allowed the user (my boyfriend) to open up a new page each day between December 1st-25th, and each day is a little nugget of madness.
