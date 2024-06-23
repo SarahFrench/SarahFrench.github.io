@@ -405,6 +405,12 @@ div.highlight code {
   text-decoration: none;
   color: var(--yellow); }
 
+.post .notice {
+  border-color: var(--pink);
+  border-style: dashed;
+  border-width: 2px;
+  padding: 2rem; }
+
 @media (min-width: 768px) {
   .post figure img {
     width: 50%; } }
@@ -547,6 +553,12 @@ div.highlight code {
 .project-page p a,
 .project-page li a {
   color: var(--purple); }
+
+.project-page .notice {
+  border-color: var(--pink);
+  border-style: dashed;
+  border-width: 2px;
+  padding: 2rem; }
 
 .project__hero-image {
   width: 100%;
