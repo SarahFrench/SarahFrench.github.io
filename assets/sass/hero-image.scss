@@ -67,6 +67,18 @@ path {
     animation: cloud-scroll-rev 60s infinite linear;
 }
 
+@media (prefers-reduced-motion) {
+    .cloud-scroll {
+        -webkit-animation: none;
+        animation: none;
+    }
+
+    .cloud-scroll-rev {
+        -webkit-animation: none;
+        animation: none;
+    }
+}
+
 @keyframes cloud-scroll {
     0% {
         -webkit-transform: translateX(-10vw);

@@ -41,6 +41,13 @@
     animation: sparkle 5s infinite ease-in-out;
 }
 
+@media (prefers-reduced-motion) {
+    .sparkle {
+        -webkit-animation: none;
+        animation: none;
+    }
+}
+
 @keyframes sparkle {
     0% {
         top: 0px;
@@ -113,6 +120,18 @@
     &--small {
         width: calc(var(--headshot-width)*0.2);
         height: calc(var(--headshot-width)*0.2);
+    }
+}
+
+@media (prefers-reduced-motion) {
+    .circle {
+
+        &--top-right,
+        &--mid-right,
+        &--low-right {
+            -webkit-animation: none;
+            animation: none;
+        }
     }
 }
 
