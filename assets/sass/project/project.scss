@@ -37,3 +37,10 @@
 .project-page li a {
     color: var(--purple);
 }
+
+.project-page .notice {
+    border-color: var(--pink);
+    border-style: dashed;
+    border-width: 2px;
+    padding: 2rem;
+}
