@@ -62,6 +62,14 @@ path {
   -webkit-animation: cloud-scroll-rev 60s infinite linear;
   animation: cloud-scroll-rev 60s infinite linear; }
 
+@media (prefers-reduced-motion) {
+  .cloud-scroll {
+    -webkit-animation: none;
+    animation: none; }
+  .cloud-scroll-rev {
+    -webkit-animation: none;
+    animation: none; } }
+
 @keyframes cloud-scroll {
   0% {
     -webkit-transform: translateX(-10vw); }
@@ -262,6 +270,11 @@ div.highlight code {
   -webkit-animation: sparkle 5s infinite ease-in-out;
   animation: sparkle 5s infinite ease-in-out; }
 
+@media (prefers-reduced-motion) {
+  .sparkle {
+    -webkit-animation: none;
+    animation: none; } }
+
 @keyframes sparkle {
   0% {
     top: 0px;
@@ -312,6 +325,11 @@ div.highlight code {
   .circle--small {
     width: calc(var(--headshot-width)*0.2);
     height: calc(var(--headshot-width)*0.2); }
+
+@media (prefers-reduced-motion) {
+  .circle--top-right, .circle--mid-right, .circle--low-right {
+    -webkit-animation: none;
+    animation: none; } }
 
 @keyframes float-top-right {
   0% {
