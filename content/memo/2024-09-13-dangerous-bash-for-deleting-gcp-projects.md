@@ -28,7 +28,7 @@ for i in $(gcloud projects list --format 'csv(projectId)' --filter 'projectId~^t
 done;
 ```
 
-This loop will tell you which project is being considered, and waits for y/n input to proceed with deletion
+This loop will tell you which project is being considered for deletion, and waits for y/n input to proceed with deletion
 
 ```bash
 for i in $(gcloud projects list --format 'csv(projectId)' --filter 'projectId~^tf-test-'  | awk 'NR>1'); do \
