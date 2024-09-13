@@ -6,35 +6,41 @@ draft: false
 
 List all projects with a given prefix to their project ID, which are ones we want to delete:
 
-```
-gcloud projects list --format 'csv(projectId)' --filter 'projectId~^tf-test-'  
+```bash
+gcloud projects list \
+--format 'csv(projectId)' \
+--filter 'projectId~^tf-test-'  
 ```
 
 Get a count of projects to be deleted (exclude CSV header from count):
 
-```
-gcloud projects list --format 'csv(projectId)' --filter 'projectId~^tf-test-'  | awk 'NR>1' | wc -l
+```bash
+gcloud projects list \
+--format 'csv(projectId)' \
+--filter 'projectId~^tf-test-' | awk 'NR>1' | wc -l
 ```
 
 Looping though the project IDs, excluding the CSV header, and using the project ID in a command:
 
-```
-for i in $(gcloud projects list --format 'csv(projectId)' --filter 'projectId~^tf-test-'  | awk 'NR>1'); do echo "$i"; done;
+```bash
+for i in $(gcloud projects list --format 'csv(projectId)' --filter 'projectId~^tf-test-'  | awk 'NR>1'); do \
+  echo "$i"; \
+done;
 ```
 
 This loop will tell you which project is being considered, and waits for y/n input to proceed with deletion
 
-```
+```bash
 for i in $(gcloud projects list --format 'csv(projectId)' --filter 'projectId~^tf-test-'  | awk 'NR>1'); do \
   printf "$i will be deleted\n"; \
   gcloud projects delete $i; \
 done;
 ```
 
-This loop should make you sweat if you haven't looked through the commands above. It automatically approves the deletion action and should be used carefully!
+This loop below should make you sweat if you haven't looked through the commands above. It automatically approves the deletion action and should be used carefully!
 Even writing it felt a little dirty, let alone using it.
 
-```
+```bash
 for i in $(gcloud projects list --format 'csv(projectId)' --filter 'projectId~^tf-test-'  | awk 'NR>1'); do \
   printf "$i will be deleted\n"; \
   yes | gcloud projects delete $i; \
