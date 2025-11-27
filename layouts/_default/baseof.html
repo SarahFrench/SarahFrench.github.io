@@ -8,7 +8,7 @@
         <style>
             @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
         </style>
-        {{ $sass := resources.Get "sass/main.scss" | resources.ToCSS}}
+        {{ $sass := resources.Get "sass/main.scss" | css.Sass}}
         <link rel="stylesheet" href="{{ $sass.Permalink }}">
         <base href="{{ .Site.BaseURL }}">
         <script>
@@ -21,7 +21,6 @@
                 const observer = new IntersectionObserver(
                     // callback argument
                     (entries, observer) => {
-                        console.log("callback fired")
                         const e = entries[0]
                         e.target.classList.toggle('nav--pinned', e.intersectionRatio < 1)
                     },
