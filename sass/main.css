@@ -87,6 +87,24 @@ path {
 
 .hero {
   z-index: -1; }
+  .hero--clouds {
+    display: none; }
+  .hero--pink-lines {
+    display: block; }
+
+.hero--homepage > .hero--clouds {
+  display: block; }
+
+.hero--homepage > .hero--pink-lines {
+  display: none; }
+
+@media (min-width: 768px) {
+  .hero {
+    margin-left: -10vw; }
+    .hero--clouds {
+      display: block; }
+    .hero--pink-lines {
+      display: none; } }
 
 .styled-font {
   font-family: var(--stylised-font); }
@@ -143,16 +161,13 @@ path {
   border-style: solid;
   border-color: var(--pink);
   background-color: var(--blue-black); }
-  .main-wrapper--home {
-    top: calc(-30vw + 100px); }
-  .main-wrapper--subpage {
-    top: calc(-10vw + 50px); }
 
 @media (min-width: 768px) {
   .main-wrapper {
-    left: 15vw;
-    width: 70vw;
-    margin-bottom: 3rem; } }
+    left: 20vw;
+    width: 80vw;
+    margin-bottom: 3rem;
+    top: calc(-65vw - 30px); } }
 
 .main-content {
   background-color: var(--blue-black);
