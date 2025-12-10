@@ -6,6 +6,39 @@
 
 .hero {
     z-index: -1;
+
+    &--clouds {
+        display: none;
+    }
+
+    &--pink-lines {
+        display: block;
+    }
+}
+
+.hero--homepage {
+    &>.hero--clouds {
+        display: block;
+    }
+
+    &>.hero--pink-lines {
+        display: none;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+    .hero {
+
+        margin-left: -10vw;
+
+        &--clouds {
+            display: block;
+        }
+
+        &--pink-lines {
+            display: none;
+        }
+    }
 }
 
 .styled-font {
@@ -83,23 +116,16 @@
     border-style: solid;
     border-color: var(--pink); // Fallback if border-image doesn't work
     background-color: var(--blue-black);
-
-    // Top position depends on the hero image shown (home vs. not-home)
-    &--home {
-        top: calc(-30vw + 100px); // YOLO calc works across devices
-    }
-
-    &--subpage {
-        top: calc(-10vw + 50px);
-    }
 }
 
 @media (min-width: $breakpoint-tablet) {
     .main-wrapper {
         // Positioning and margin
-        left: 15vw;
-        width: 70vw; // 100 - 2*15
+        left: 20vw;
+        width: 80vw; // 100 - 15
         margin-bottom: 3rem;
+
+        top: calc(-65vw - 30px);
     }
 }
 

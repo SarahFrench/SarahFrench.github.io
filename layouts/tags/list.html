@@ -28,7 +28,7 @@
         {{$projectCount := len $projectsTagged}}
         {{if gt $projectCount 0}}
         <ul class="tag-index__list">
-        {{ range where .Pages "Section" "project" }}
+            {{ range where .Pages "Section" "project" }}
             <li class="tag-index__link">
                 <a href="{{.Permalink}}">
                     {{.Title}}
@@ -44,5 +44,8 @@
 {{ end }}
 
 {{ define "hero" }}
-{{ partial "hero/pink-lines.svg" }}
+<div>
+    {{ partial "hero/hero-image.svg" }}
+    {{ partial "hero/pink-lines.svg" }}
+</div>
 {{ end }}
