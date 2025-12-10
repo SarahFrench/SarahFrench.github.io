@@ -1,7 +1,10 @@
 {{ define "main" }}
-    {{ partial "blog/post" . }}
+{{ partial "blog/post" . }}
 {{ end }}
 
 {{ define "hero" }}
+<div>
+    {{ partial "hero/hero-image.svg" }}
     {{ partial "hero/pink-lines.svg" }}
+</div>
 {{ end }}

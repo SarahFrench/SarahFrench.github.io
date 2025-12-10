@@ -25,7 +25,7 @@
 {{ end }}
 
 {{ define "hero" }}
-<ignore-format>
+<div class="{{ if .IsHome }}hero--homepage{{end}}">
+    {{ partial "hero/hero-image.svg" }}
     {{ partial "hero/pink-lines.svg" }}
-</ignore-format>
-{{ end }}
+</div>{{ end }}

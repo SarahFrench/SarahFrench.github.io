@@ -43,7 +43,7 @@
         {{partial "menu" .}}
         {{ block "hero" . }}
         {{ end }}
-        <div class="main-wrapper  {{ if .IsHome }}main-wrapper--home{{else}}main-wrapper--subpage{{end}}">
+        <div class="main-wrapper">
             <main class="main-content">
                 {{ block "main" . }}
                 {{ end }}
