@@ -1,8 +1,5 @@
 {{ define "hero" }}
-<div class="{{ if .IsHome }}hero--homepage{{end}}">
-    {{ partial "hero/hero-image.svg" }}
-    {{ partial "hero/pink-lines.svg" }}
-</div>
+{{ partial "hero/hero-image.svg" }}
 {{ end }}
 
 {{ define "main" }}
