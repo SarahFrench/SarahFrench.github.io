@@ -3,9 +3,7 @@
     "languageCode": "en-uk",
     "title": "Sarah French",
     "taxonomies": {
-        "tag": "tags",
-        "category": "categories",
-        "series": "series"
+        "tag": "tags"
     },
     "menu": {
         "main": [
